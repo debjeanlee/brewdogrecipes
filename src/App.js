@@ -8,13 +8,15 @@ function App() {
   const [ beer, setBeer ] = useState({});
 
   useEffect(() => {
-  
+    let count = 1;
+
       async function getBeerData(){
-        const result = await axios.get(`?page=1`);
+        const result = await axios.get(`?page=${count}`);
         setBeer(result.data);
         }
-
+      
       getBeerData();
+    
   }, [])
   
 
@@ -23,7 +25,11 @@ function App() {
   return (
     <div>
       <Navigation />
-
+      <ul>
+        {beer.map((el) => (
+          <li key={el.id}>{el.name}</li>
+        ))}
+      </ul>
     </div>
   );
 }
