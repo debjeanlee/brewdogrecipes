@@ -7,14 +7,18 @@ function App() {
 
   const [ beer, setBeer ] = useState({});
 
-  // useEffect(() => {
-  //     async function getBeerData(){
-  //       const result = await axios.get("?page=13");
-  //       console.log(result.data.length);
-  //     }
-  //     getBeerData();
-  // }, [])
+  useEffect(() => {
   
+      async function getBeerData(){
+        const result = await axios.get(`?page=1`);
+        setBeer(result.data);
+        }
+
+      getBeerData();
+  }, [])
+  
+
+  console.log(beer);
 
   return (
     <div>
