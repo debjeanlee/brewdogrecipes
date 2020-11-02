@@ -14,7 +14,7 @@ function Basics() {
     return (
         <Container className="text-center">
             <h1>BASICS</h1>
-            <BasicInfoCard />
+            <BasicInfoCard title="Mashing" info={brewInfo}/>
         </Container>
     )
 }

@@ -1,21 +1,34 @@
-import React from 'react'
-import { Card, Container } from 'react-bootstrap'
+import React, { useState } from 'react'
+import mashpot from '../images/mashpot.png'
+import boiling from '../images/boiling.png'
+import fermentation from '../images/fermentation.png'
+import conditioning from '../images/conditioning.png'
+import { Button, Card, Accordion } from 'react-bootstrap'
 
-function BasicInfoCard() {
+function BasicInfoCard(props) {
     return (
-        <Container>
-            <Card className="bg-dark text-white">
-                <Card.Img src="holder.js/100px270" alt="Card image" />
-                <Card.ImgOverlay>
-                    <Card.Title>Card title</Card.Title>
-                    <Card.Text>
-                    This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.
-                    </Card.Text>
-                    <Card.Text>Last updated 3 mins ago</Card.Text>
-                </Card.ImgOverlay>
+        <Accordion>
+            <Card>
+                <Card.Header>
+                <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                    Click me!
+                </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="0">
+                <Card.Body>Hello! I'm the body</Card.Body>
+                </Accordion.Collapse>
             </Card>
-        </Container>
+            <Card>
+                <Card.Header>
+                <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                    Click me!
+                </Accordion.Toggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="1">
+                <Card.Body>Hello! I'm another body</Card.Body>
+                </Accordion.Collapse>
+            </Card>
+        </Accordion>
     )
 }
 
