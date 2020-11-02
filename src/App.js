@@ -5,19 +5,19 @@ import React, {useState, useEffect} from 'react'
 
 function App() {
 
-  const [ beer, setBeer ] = useState({});
+  const [ beer, setBeer ] = useState([]);
 
-  useEffect(() => {
-    let count = 1;
+  // useEffect(() => {
+  //   let count = 1;
 
-      async function getBeerData(){
-        const result = await axios.get(`?page=${count}`);
-        setBeer(result.data);
-        }
+  //     async function getBeerData(){
+  //       const result = await axios.get(`?page=${count}`);
+  //       setBeer(result.data);
+  //       }
       
-      getBeerData();
+  //     getBeerData();
     
-  }, [])
+  // }, [])
   
 
   console.log(beer);
