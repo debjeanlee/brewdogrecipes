@@ -17,7 +17,7 @@ function BeerCard(props) {
                     <p className="card-text container text-center">{props.beer.tagline}</p>
                 </div>
         
-                <a href="#" className="btn btn-light">Go somewhere</a>
+                <a href="./SingleBeerPage" className="btn btn-light">Go somewhere</a>
             </div>
         </div>
     )
