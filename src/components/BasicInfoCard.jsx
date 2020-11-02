@@ -1,34 +1,31 @@
-import React, { useState } from 'react'
-import mashpot from '../images/mashpot.png'
-import boiling from '../images/boiling.png'
-import fermentation from '../images/fermentation.png'
-import conditioning from '../images/conditioning.png'
-import { Button, Card, Accordion } from 'react-bootstrap'
+import React from 'react'
+import { Card, Accordion, Image, Row, Col, Container } from 'react-bootstrap'
 
 function BasicInfoCard(props) {
+
+
+    // console.log(props.info);
+
     return (
-        <Accordion>
+        <Container className="mb-2">
             <Card>
-                <Card.Header>
-                <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                    Click me!
-                </Accordion.Toggle>
-                </Card.Header>
-                <Accordion.Collapse eventKey="0">
-                <Card.Body>Hello! I'm the body</Card.Body>
-                </Accordion.Collapse>
+                <Accordion defaultActiveKey="0">
+                    <Row>
+                        <Col md={4}>
+                            <Image src={props.imgURL} alt="" className="info-card-img" />
+                        </Col>
+                        <Col md={8}>
+                            <Accordion.Toggle as={Card.Body} eventKey={props.title}>
+                                <h1>{props.title}</h1>
+                            </Accordion.Toggle>
+                            <Accordion.Collapse eventKey={props.title}>
+                            <Card.Body>{props.info}</Card.Body>
+                            </Accordion.Collapse>
+                        </Col>
+                    </Row>
+                </Accordion>
             </Card>
-            <Card>
-                <Card.Header>
-                <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                    Click me!
-                </Accordion.Toggle>
-                </Card.Header>
-                <Accordion.Collapse eventKey="1">
-                <Card.Body>Hello! I'm another body</Card.Body>
-                </Accordion.Collapse>
-            </Card>
-        </Accordion>
+        </Container>
     )
 }
 

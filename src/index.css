@@ -19,6 +19,12 @@ code {
 }
 
 .info-card-img {
-  width: 200px;
+  width: 180px;
   height: auto;
+  padding: 30px;
+}
+
+.browse-img {
+  width: 40px;
+  height: 40px;
 }

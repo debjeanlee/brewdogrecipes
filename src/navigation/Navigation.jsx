@@ -3,7 +3,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
 import Home from './Home'
 import Basics from './Basics'
-import Beers from './beers/Beers'
+import Beers from '../beers/Beers'
 import logo from '../images/brewdog-logo.png'
 
 
