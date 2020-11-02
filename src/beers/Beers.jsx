@@ -28,9 +28,9 @@ function Beers() {
         
         getBeerData();
       
-    }, [])
+    }, [page])
 
-    // console.log(beer);
+    console.log("Page on Beers:", page);
     
     return (
         <Router>
@@ -54,7 +54,7 @@ function Beers() {
 
             <Switch>
             <Route path="/beers/all" exact>
-                <All setPage={setPage} beer={beer}/>
+                <All setPage={setPage} beer={beer} page={page}/>
             </Route>
             <Route path="/beers/abv" exact>
                 <ABV />

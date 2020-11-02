@@ -1,17 +1,11 @@
 import React from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Container, Jumbotron } from 'react-bootstrap'
 
 function Home() {
     return (
-        <Container className="text-center mt-5">
-            <Row className="home-text justify-content-center">
-                <h1>
-                    <strong>DO</strong>
-                    <small>YOUROWN</small>
-                    <strong>DOG</strong>
-                </h1>
-            </Row>
-        </Container>
+        <Jumbotron fluid style={{height: '100vh'}} className="d-flex justify-content-center">
+            <h1 className="my-auto">DO <small>yourown</small> DOG</h1>
+        </Jumbotron>
     )
 }
 

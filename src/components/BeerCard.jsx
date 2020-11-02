@@ -3,7 +3,7 @@ import beerbottle from '../images/beerbottle.png'
 
 function BeerCard(props) {
 
-console.log(props);
+// console.log(props);
 
     return (
         <div className="card m-2" style={{width: `12em`}}>
