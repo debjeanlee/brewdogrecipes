@@ -30,7 +30,7 @@ function Beers() {
       
     }, [page])
 
-    console.log("Page on Beers:", page);
+    // console.log("Page on Beers:", page);
     
     return (
         <Router>
