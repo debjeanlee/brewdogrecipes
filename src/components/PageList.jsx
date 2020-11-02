@@ -9,10 +9,6 @@ function PageList(props) {
         props.setPage(e.target.innerHTML);
     }
 
-    function handleClick(e){
-        setPage(e);
-    }
-
 
     return (
         <Pagination>
