@@ -11,8 +11,8 @@ import ID from '../beers/ID'
 
 function Navigation() {
 
-    // const [ singleBeer, setSingleBeer ] = useState({});
-    // console.log("Nav singlebeer", singleBeer);
+    const [ singleBeer, setSingleBeer ] = useState({});
+
 
     return (
         <Router>
@@ -26,7 +26,7 @@ function Navigation() {
                 <Nav className="mr-auto">
                     <NavLink className="nav-link" to="/">Home</NavLink>
                     <NavLink className="nav-link" to="/basics">Brewer Basics</NavLink>
-                    <NavLink className="nav-link" to="/beers/all">Browse Recipes</NavLink>
+                    <NavLink className="nav-link" to={`/beers/all`}>Browse Recipes</NavLink>
                 </Nav>
                 <Form inline>
                     <FormControl type="text" placeholder="Search Recipes" className="mr-sm-2" />
@@ -43,12 +43,11 @@ function Navigation() {
                     <Basics />
                 </Route>
                 <Route path="/beers/all" exact>
-                    {/* <Beers setSingleBeer={setSingleBeer}/> */}
-                    <Beers />
+                    <Beers setSingleBeer={setSingleBeer}/>
                 </Route>
-                {/* <Route path="/beers/id/:id">
+                <Route path="/id/:id">
                     <ID beer={singleBeer}/>
-                </Route> */}
+                </Route>
             </Switch>
             </Router>
     )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import beerbottle from '../images/beerbottle.png'
 
@@ -14,7 +14,6 @@ function BeerCard(props) {
 
     const date = (`${monthName} ${year}`);
     
-    // console.log(props.beer);
 
     function handleClick(){
         props.setSingleBeer(props.beer);
@@ -43,7 +42,7 @@ function BeerCard(props) {
                     </div>
                 </div>
         
-                <Link className="nav-link" to={`/beers/id/${props.beer.id}`} onClick={() => {handleClick()}}>See Recipe</Link>
+                <Link className="nav-link" to={`/id/${props.beer.id}`} onClick={() => {handleClick()}}>See Recipe</Link>
             </div>
         </div>
     )

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container } from 'react-bootstrap';
-import axios from './axios.js'
 import Header from './singlebeer/Header.jsx';
 
 
