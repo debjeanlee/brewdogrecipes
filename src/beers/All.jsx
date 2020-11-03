@@ -1,7 +1,7 @@
 import React from 'react'
 import BeerList from './BeerList'
 import { Row } from 'react-bootstrap'
-import PageList from '../components/PageList'
+import PageList from './PageList'
 
 function All(props) {
 

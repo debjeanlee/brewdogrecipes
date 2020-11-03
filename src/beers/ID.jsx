@@ -13,7 +13,6 @@ function ID() {
   
         async function getBeerData(){
           const result = await axios.get(`?ids=${id}`);
-        //   console.log("result.data:", result.data);
           setBeer(result.data[0]);
           }
         

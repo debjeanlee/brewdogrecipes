@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import { brewInfo } from '../brewinginfo'
-import BasicInfoCard from '../components/BasicInfoCard'
+import BasicInfoCard from '../beers/BasicInfoCard'
 import mashpot from '../images/mashpot.png'
 import boiling from '../images/boiling.png'
 import fermentation from '../images/fermentation.png'

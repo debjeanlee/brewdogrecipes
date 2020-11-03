@@ -1,22 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import beerbottle from '../images/beerbottle.png'
-import { Link } from 'react-router-dom'
 
 
 function BeerCard(props) {
 
-console.log(props);
+console.log(props.beer);
+
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const firstBrew = props.beer.first_brewed;
+    const month = firstBrew.slice(0,2);
+    const year = firstBrew.slice(3);
+    const d = new Date(year, month);
+    const monthName = months[d.getMonth()];
+
+    const date = (`${monthName} ${year}`);
+    
+
 
     return (
-        <div className="card m-2" style={{width: `12em`}}>
+        <div className="card m-2" style={{width: `18em`}}>
             <div className="card-body d-flex flex-column justify-content-between">
                 <div className="row d-flex align-middle">
-                    <img src={beerbottle} className="card-img-top browse-img" alt="" />
-                    <h5 className="card-title col-8 p-0 my-auto">{props.beer.name}</h5>
+                    <img src={beerbottle} className="card-img-top browse-img ml-4" alt="" />
+                    <span className="card-title col-8 p-0 m-auto lh-2"><strong>{props.beer.name}</strong></span>
                 </div>
-    
-                <div className="row mt-3">
-                    <p className="card-text container text-center">{props.beer.tagline}</p>
+
+                <div className="card-body">
+                    <div className="row mt-3 justify-content-center">
+                        <h5>{date}</h5>
+                    </div>
+        
+                    <div className="row mt-3 justify-content-between">
+                        <span className="pr-1"><strong>ABV </strong>{props.beer.abv}%</span>
+                        <span className="pr-1"><strong>IBU </strong>{props.beer.ibu}</span>
+                        <span className="pr-1"><strong>OG </strong>{props.beer.target_og}</span>
+
+                    </div>
                 </div>
         
                 <a href={`/beers/id/${props.beer.id}`} className="btn btn-light">See Recipe</a>
