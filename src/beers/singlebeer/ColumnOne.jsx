@@ -44,7 +44,7 @@ function ColumnOne({beer}) {
                     <strong className="mr-auto">PH</strong> 
                     {beer.ph}
                 </p>
-                <p className="d-flex border-bottom py-2">
+                <p className="d-flex pt-2 pb-1">
                     <strong className="mr-auto">ATTENUATION LEVEL</strong> 
                     {beer.attenuation_level}
                 </p>

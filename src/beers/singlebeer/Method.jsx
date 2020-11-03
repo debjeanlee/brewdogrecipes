@@ -6,7 +6,7 @@ import { Jumbotron, Row } from 'react-bootstrap'
 
 function Method({ method }) {
 
-    console.log(method.fermentation.temp);
+    // console.log(method.fermentation.temp);
 
     return (
         <div>
@@ -37,7 +37,7 @@ function Method({ method }) {
                 {(method.twist !== null) ? (
                     <>
                         <Row className="mb-3">
-                            <img className="id-icon mr-3" src={fermentation} alt="" />
+                            <img className="id-icon mr-3" src={twist} alt="" />
                             <h4 className="my-auto">TWIST</h4>
                         </Row>
                         <Row className="d-flex border-bottom mb-3 py-2">

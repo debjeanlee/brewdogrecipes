@@ -8,7 +8,9 @@ import HopsList from './HopsList'
 import MaltList from './MaltList'
 
 function ColumnTwo({ beer }) {
-    console.log(beer);
+    
+    // console.log(beer);
+    
     return (
         <Col md={4} sm={6} className="mx-auto">
             <h3>INGREDIENTS</h3>

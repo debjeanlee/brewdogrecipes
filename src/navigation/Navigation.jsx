@@ -16,23 +16,20 @@ function Navigation() {
 
     return (
         <Router>
-            <Navbar bg="light" expand="lg" >
-                <NavLink className="navbar-brand mr-1" to="/">
+            <Navbar className="d-flex" bg="light" expand="lg" >
                     <Image src={logo} alt="logo" className="logo mr-2" />
+                <NavLink className="navbar-brand" to="/">
                     DO-DOG
                 </NavLink>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <NavLink className="nav-link" to="/">Home</NavLink>
                     <NavLink className="nav-link" to="/basics">Brewer Basics</NavLink>
                     <NavLink className="nav-link" to={`/beers/all`}>Browse Recipes</NavLink>
                 </Nav>
                 <Form inline>
-                    <FormControl type="text" placeholder="Search Recipes" className="mr-sm-2" />
+                    <FormControl type="text" placeholder="Search Beers" className="mr-sm-2" />
                     <Button variant="outline-secondary">Search</Button>
                 </Form>
-                </Navbar.Collapse>
             </Navbar>    
 
             <Switch>

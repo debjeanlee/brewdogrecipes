@@ -3,7 +3,7 @@ import { Row } from 'react-bootstrap'
 
 function HopsList({ hops }) {
 
-    console.log(hops);
+    // console.log(hops);
 
     return (
         <>

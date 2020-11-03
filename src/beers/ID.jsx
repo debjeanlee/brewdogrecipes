@@ -8,7 +8,7 @@ import Header from './singlebeer/Header.jsx';
 
 function ID({beer}) {
 
-    console.log(beer);
+    // console.log(beer);
    
     const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
     const firstBrew = beer.first_brewed;

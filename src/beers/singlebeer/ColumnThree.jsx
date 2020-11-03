@@ -19,7 +19,7 @@ function ColumnThree({ beer }) {
             </Jumbotron>
         
             <h3>BREWER'S TIP</h3>
-            <Jumbotron className="pt-4 pb-3">
+            <Jumbotron className="py-4">
                 {beer.brewers_tips}
             </Jumbotron>
             

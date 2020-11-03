@@ -15,6 +15,9 @@ function All(props) {
             <Row className="mt-3">
                 <BeerList beer={props.beer} page={props.page} setSingleBeer={props.setSingleBeer}/>
             </Row>
+            {/* <Row className="d-flex justify-content-end mt-4 col-10">
+                <PageList setPage={props.setPage} page={props.page} />
+            </Row> */}
         </div>
     )
 }

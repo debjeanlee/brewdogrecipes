@@ -24,13 +24,15 @@ function BeerCard(props) {
     return (
         <div className="card m-2" style={{width: `18em`}}>
             <div className="card-body d-flex flex-column justify-content-between">
-                <div className="row d-flex align-middle">
-                    <img src={beerbottle} className="card-img-top browse-img ml-4" alt="" />
-                    <span className="card-title col-8 p-0 m-auto lh-2"><strong>{props.beer.name}</strong></span>
+                <div className="container">
+                    <div className="row d-flex align-middle">
+                        <img src={beerbottle} className="card-img-top browse-img" alt="" />
+                        <span className="card-title col-8 p-0 m-auto lh-2"><strong>{props.beer.name}</strong></span>
+                    </div>
                 </div>
 
                 <div className="card-body">
-                    <div className="row mt-3 justify-content-center">
+                    <div className="row mt-3 justify-content-end">
                         <h5>{date}</h5>
                     </div>
         
@@ -42,7 +44,7 @@ function BeerCard(props) {
                     </div>
                 </div>
         
-                <Link className="nav-link" to={`/id/${props.beer.id}`} onClick={() => {handleClick()}}>See Recipe</Link>
+                <Link className="nav-link btn-light text-center" to={`/id/${props.beer.id}`} onClick={() => {handleClick()}}>See Recipe</Link>
             </div>
         </div>
     )
