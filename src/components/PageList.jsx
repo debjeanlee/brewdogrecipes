@@ -2,18 +2,47 @@ import React, { useState } from 'react'
 import { Pagination } from 'react-bootstrap'
 
 function PageList(props) {
+  
+    const [ active, setActive ] = useState(1);
+    let items = [];
+    for (let x = 1; x < 14; x++) {
+        items.push(
+            <Pagination.Item 
+                key={x}
+                active={x === active}
+                onClick={ e => {handleClick(e)}}
+            >
+                {x}
+            </Pagination.Item>,
+        )
+    }
 
-    // console.log("props page + 1" , props.page);
+    function handleClick(e){
+        setPage(e);
+        let page = parseInt(e.target.innerHTML);
+        setActive(page);
+    }
 
     function setPage(e){
-        props.setPage(parseInt(e.target.innerHTML));
+        props.setPage(parseInt(e.target.innerHTML));    
+    }
+
+    function firstPage(){
+        props.setPage(1);
+        setActive(1);
+    }
+    
+    function lastPage(){
+        props.setPage(13);
+        setActive(13);
     }
 
     function nextPage(){
         if (props.page === 13) {
             console.log("HAHA NO MORE")
         } else {
-            props.setPage(parseInt(props.page) + 1)
+            props.setPage(parseInt(props.page) + 1);
+            setActive(active + 1);
         }
     }
 
@@ -21,30 +50,21 @@ function PageList(props) {
         if (props.page === 1) {
             console.log("HAHA NO MORE")
         } else {
-            props.setPage(parseInt(props.page) - 1)
+            props.setPage(parseInt(props.page) - 1);
+            setActive(active - 1);
         }
     }
+
+    
 
 
     return (
         <Pagination>
-            <Pagination.First onClick={() => {props.setPage(1)}}/>
+            <Pagination.First onClick={() => {firstPage()}}/>
             <Pagination.Prev onClick={() => {prevPage()}}/>
-            <Pagination.Item onClick={ e => {setPage(e)}}>{1}</Pagination.Item>
-            <Pagination.Item onClick={ e => {setPage(e)}}>{2}</Pagination.Item>
-            <Pagination.Item onClick={ e => {setPage(e)}}>{3}</Pagination.Item>
-            <Pagination.Item onClick={ e => {setPage(e)}}>{4}</Pagination.Item>
-            <Pagination.Item onClick={ e => {setPage(e)}}>{5}</Pagination.Item>
-            <Pagination.Item onClick={ e => {setPage(e)}}>{6}</Pagination.Item>
-            <Pagination.Item onClick={ e => {setPage(e)}}>{7}</Pagination.Item>
-            <Pagination.Item onClick={ e => {setPage(e)}}>{8}</Pagination.Item>
-            <Pagination.Item onClick={ e => {setPage(e)}}>{9}</Pagination.Item>
-            <Pagination.Item onClick={ e => {setPage(e)}}>{10}</Pagination.Item>
-            <Pagination.Item onClick={ e => {setPage(e)}}>{11}</Pagination.Item>
-            <Pagination.Item onClick={ e => {setPage(e)}}>{12}</Pagination.Item>
-            <Pagination.Item onClick={ e => {setPage(e)}}>{13}</Pagination.Item>
+            {items}
             <Pagination.Next onClick={() => {nextPage()}}/>
-            <Pagination.Last onClick={() => {props.setPage(13)}}/>
+            <Pagination.Last onClick={() => {lastPage()}}/>
         </Pagination>
     )
 }
