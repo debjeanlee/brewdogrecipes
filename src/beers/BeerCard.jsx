@@ -17,7 +17,7 @@ function BeerCard(props) {
 
     function handleClick(){
         props.setSingleBeer(props.beer);
-        console.log("clicked");
+        // console.log("clicked");
     }
 
 
