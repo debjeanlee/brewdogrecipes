@@ -3,6 +3,7 @@ import { Col, Jumbotron, Row } from 'react-bootstrap'
 import hops from '../../images/hops.png'
 import malts from '../../images/malts.png'
 import yeast from '../../images/yeast.png'
+import food from '../../images/food.png'
 import HopsList from './HopsList'
 import MaltList from './MaltList'
 
@@ -30,18 +31,27 @@ function ColumnTwo({ beer }) {
                 </Row>
                 <HopsList hops={beer.ingredients.hops} />
 
-                <Row className="my-3">
+                <Row className="mt-4 mb-3">
                     <img className="id-icon mr-3" src={yeast} alt="" />
                     <h4 className="my-auto">YEAST</h4>
                 </Row>
                 <Row className="d-flex border-bottom mb-3 py-2">
-                  
+                    {beer.ingredients.yeast}
                 </Row>
             </Jumbotron>
         
             <h3>FOOD PAIRING</h3>
-            <Jumbotron>
-                <h1>This is col 1</h1>
+            <Jumbotron className="pt-4 pb-3">
+                <Row className="mb-3">
+                    <img className="id-icon mr-3" src={food} alt="" />
+                </Row>
+
+                {beer.food_pairing.map((el, i) => (
+                    <Row className="d-flex border-bottom mb-2 py-2" key={i}>
+                        {el}
+                    </Row>
+                ))}
+
             </Jumbotron>
         </Col>
     )
