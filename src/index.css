@@ -32,3 +32,8 @@ code {
 .lh-2 {
   line-height: 1.1em;
 }
+
+.id-icon {
+  width: 60px;
+  height: auto;
+}
