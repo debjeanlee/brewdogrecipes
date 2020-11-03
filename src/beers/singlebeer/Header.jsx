@@ -16,7 +16,7 @@ function Header({ beer, date }) {
             </Row>
             <Row className="border-top border-bottom my-2 py-3 d-flex">
                 <h2 className="mr-auto my-auto">{beer.tagline}</h2>
-                <h4 className="mr-2 my-auto"><strong>ABV </strong>{beer.abv} |</h4>
+                <h4 className="mr-2 my-auto"><strong>ABV </strong>{beer.abv}% |</h4>
                 <h4 className="mr-2 my-auto"><strong>IBU </strong>{beer.ibu} |</h4>
                 <h4 className="mr-2 my-auto"><strong>OG </strong>{beer.target_og}</h4>
             </Row>

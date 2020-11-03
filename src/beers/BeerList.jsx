@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import BeerCard from './BeerCard';
 
 function BeerList(props) {

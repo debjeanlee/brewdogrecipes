@@ -1,6 +1,7 @@
 import React from 'react'
 import mashing from '../../images/mashing.png'
 import fermentation from '../../images/fermentation2.png'
+import twist from '../../images/twist.png'
 import { Jumbotron, Row } from 'react-bootstrap'
 
 function Method({ method }) {
@@ -33,6 +34,18 @@ function Method({ method }) {
                         {(method.fermentation.temp.unit === "celsius") ? "\xB0C" : "\xB0F" }
                     </span>              
                 </Row>
+                {(method.twist !== null) ? (
+                    <>
+                        <Row className="mb-3">
+                            <img className="id-icon mr-3" src={fermentation} alt="" />
+                            <h4 className="my-auto">TWIST</h4>
+                        </Row>
+                        <Row className="d-flex border-bottom mb-3 py-2">
+                            {method.twist}
+                        </Row>
+                    </>
+                ) :
+                "" }
             </Jumbotron>
         </div>
     )
