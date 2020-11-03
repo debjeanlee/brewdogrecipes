@@ -12,7 +12,7 @@ function All(props) {
                 <h1 className="text-center">ALL BEER</h1>
                 <PageList setPage={props.setPage} page={props.page}/>
             </Row>
-            <BeerList beer={props.beer} page={props.page}/>
+            <BeerList beer={props.beer} page={props.page} setSingleBeer={props.setSingleBeer}/>
         </div>
     )
 }

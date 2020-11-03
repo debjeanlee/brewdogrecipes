@@ -10,7 +10,7 @@ function BeerList(props) {
         <Container>
             <Row>
                 {beers.map((el) => (
-                    <BeerCard beer={el} key={el.id} />
+                    <BeerCard beer={el} key={el.id} setSingleBeer={props.setSingleBeer}/>
                     ))}
             </Row>
         </Container>

@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
+import { Button, NavLink } from 'react-bootstrap';
 import beerbottle from '../images/beerbottle.png'
 
 
 function BeerCard(props) {
-
-console.log(props.beer);
 
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const firstBrew = props.beer.first_brewed;
@@ -15,6 +14,12 @@ console.log(props.beer);
 
     const date = (`${monthName} ${year}`);
     
+    // console.log(props.beer);
+
+    function handleClick(){
+        props.setSingleBeer(props.beer);
+        console.log("clicked");
+    }
 
 
     return (
@@ -38,7 +43,7 @@ console.log(props.beer);
                     </div>
                 </div>
         
-                <a href={`/beers/id/${props.beer.id}`} className="btn btn-light">See Recipe</a>
+                <Button onClick={() => {handleClick()}}>See Recipe</Button>
             </div>
         </div>
     )

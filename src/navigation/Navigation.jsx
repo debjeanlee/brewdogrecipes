@@ -1,17 +1,15 @@
 import { Button, Navbar, Nav, NavDropdown, Form, FormControl, Image } from 'react-bootstrap'
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
 import Home from './Home'
 import Basics from './Basics'
 import Beers from '../beers/Beers'
 import logo from '../images/brewdog-logo.png'
-import ID from '../beers/ID'
 
 
 
 function Navigation() {
 
-  
 
     return (
         <Router>
@@ -53,9 +51,9 @@ function Navigation() {
                 <Route path="/beers/all" exact>
                     <Beers />
                 </Route>
-                <Route path="/beers/id/:id" >
+                {/* <Route path="/beers/id/:id" >
                     <ID />
-                </Route>
+                </Route> */}
                 {/* <Route path="/beers/abv" exact>
                     <Beers />
                 </Route> */}
