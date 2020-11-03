@@ -6,18 +6,21 @@ import Header from './singlebeer/Header.jsx';
 function ID({beer}) {
 
    
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
     const firstBrew = beer.first_brewed;
-    const month = firstBrew.slice(0,2);
-    const year = firstBrew.slice(3);
+    const month = ((firstBrew.length === 4) ? null : firstBrew.slice(0,2));
+    const year = ((firstBrew.length === 4) ? firstBrew : beer.first_brewed.slice(3));
     const d = new Date(year, month);
-    const monthName = months[d.getMonth()];
+    const monthName = ((month === null) ? "" : months[d.getMonth()]);
 
 
-    const dateStr = (`${monthName} ${year}`);
+    const dateStr = (monthName + " " + year);
     
-
     console.log(beer);
+    console.log(firstBrew.length);
+    console.log(month, year, d, monthName);
+    console.log(dateStr);
+
 
     return (
         <Container>
