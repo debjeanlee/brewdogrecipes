@@ -1,9 +1,11 @@
 import React from 'react'
 import beerbottle from '../images/beerbottle.png'
+import { Link } from 'react-router-dom'
+
 
 function BeerCard(props) {
 
-// console.log(props);
+console.log(props);
 
     return (
         <div className="card m-2" style={{width: `12em`}}>
@@ -17,7 +19,7 @@ function BeerCard(props) {
                     <p className="card-text container text-center">{props.beer.tagline}</p>
                 </div>
         
-                <a href="./SingleBeerPage" className="btn btn-light">Go somewhere</a>
+                <a href={`/beers/id/${props.beer.id}`} className="btn btn-light">See Recipe</a>
             </div>
         </div>
     )

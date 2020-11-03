@@ -7,6 +7,7 @@ import All from './All'
 import FoodPairings from './FoodPairings'
 import Year from './Year'
 import axios from './axios.js'
+import ID from './ID'
 
 
 
@@ -50,6 +51,7 @@ function Beers() {
             <Nav.Item>
                 <NavLink className="nav-link" eventkey="link-4" to="/beers/foodpairings">Food Pairings</NavLink>
             </Nav.Item>
+            <Nav.Link href="/beers/id/">ID</Nav.Link>
             </Nav>
 
             <Switch>
@@ -67,6 +69,9 @@ function Beers() {
             </Route>
             <Route path="/beers/foodpairings" exact>
                 <FoodPairings />
+            </Route>
+            <Route path="/beers/id/">
+                <ID />   
             </Route>
         </Switch>
         </Router>

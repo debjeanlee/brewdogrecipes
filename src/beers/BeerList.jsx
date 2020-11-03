@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap';
-import BeerCard from '../components/BeerCard';
+import BeerCard from './BeerCard';
 
 function BeerList(props) {
    

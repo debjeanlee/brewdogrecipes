@@ -5,6 +5,8 @@ import Home from './Home'
 import Basics from './Basics'
 import Beers from '../beers/Beers'
 import logo from '../images/brewdog-logo.png'
+import ID from '../beers/ID'
+
 
 
 function Navigation() {
@@ -50,6 +52,9 @@ function Navigation() {
                 </Route>
                 <Route path="/beers/all" exact>
                     <Beers />
+                </Route>
+                <Route path="/beers/id/:id" >
+                    <ID />
                 </Route>
                 {/* <Route path="/beers/abv" exact>
                     <Beers />

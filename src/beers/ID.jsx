@@ -1,6 +1,7 @@
 import React from 'react'
 
-function SingleBeerPage() {
+function ID() {
+
     return (
         <div>
             <h1>ONE BEER</h1>
@@ -8,4 +9,4 @@ function SingleBeerPage() {
     )
 }
 
-export default SingleBeerPage
+export default ID
