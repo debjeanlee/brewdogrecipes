@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Pagination } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 
 function PageList(props) {
   
@@ -7,13 +8,13 @@ function PageList(props) {
     let items = [];
     for (let x = 1; x < 14; x++) {
         items.push(
-            <Pagination.Item 
-                key={x}
-                active={x === active}
-                onClick={ e => {handleClick(e)}}
-            >
-                {x}
-            </Pagination.Item>,
+                <Pagination.Item to={`/beers/all/page/${x}`}
+                    key={x}
+                    active={x === active}
+                    onClick={ e => {handleClick(e)}}
+                >
+                    {x}   
+                </Pagination.Item>,
         )
     }
 

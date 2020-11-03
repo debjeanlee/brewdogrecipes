@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, NavLink } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 import beerbottle from '../images/beerbottle.png'
 
 
@@ -43,7 +43,7 @@ function BeerCard(props) {
                     </div>
                 </div>
         
-                <Button onClick={() => {handleClick()}}>See Recipe</Button>
+                <Link className="nav-link" to={`/beers/id/${props.beer.id}`} onClick={() => {handleClick()}}>See Recipe</Link>
             </div>
         </div>
     )

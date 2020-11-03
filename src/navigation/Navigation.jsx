@@ -1,15 +1,18 @@
-import { Button, Navbar, Nav, NavDropdown, Form, FormControl, Image } from 'react-bootstrap'
+import { Button, Navbar, Nav, Form, FormControl, Image } from 'react-bootstrap'
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
 import Home from './Home'
 import Basics from './Basics'
 import Beers from '../beers/Beers'
 import logo from '../images/brewdog-logo.png'
+import ID from '../beers/ID'
 
 
 
 function Navigation() {
 
+    // const [ singleBeer, setSingleBeer ] = useState({});
+    // console.log("Nav singlebeer", singleBeer);
 
     return (
         <Router>
@@ -24,15 +27,6 @@ function Navigation() {
                     <NavLink className="nav-link" to="/">Home</NavLink>
                     <NavLink className="nav-link" to="/basics">Brewer Basics</NavLink>
                     <NavLink className="nav-link" to="/beers/all">Browse Recipes</NavLink>
-                    {/* <NavDropdown title="Browse Recipes" id="collasible-nav-dropdown">
-                        <NavLink className="dropdown-item" type="button" to="/beers/abv">
-                            ABV
-                        </NavLink>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                    </NavDropdown> */}
                 </Nav>
                 <Form inline>
                     <FormControl type="text" placeholder="Search Recipes" className="mr-sm-2" />
@@ -49,13 +43,11 @@ function Navigation() {
                     <Basics />
                 </Route>
                 <Route path="/beers/all" exact>
+                    {/* <Beers setSingleBeer={setSingleBeer}/> */}
                     <Beers />
                 </Route>
-                {/* <Route path="/beers/id/:id" >
-                    <ID />
-                </Route> */}
-                {/* <Route path="/beers/abv" exact>
-                    <Beers />
+                {/* <Route path="/beers/id/:id">
+                    <ID beer={singleBeer}/>
                 </Route> */}
             </Switch>
             </Router>

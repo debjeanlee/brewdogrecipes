@@ -1,12 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
-import { Nav } from 'react-bootstrap'
-import ABV from './ABV'
-import IBU from './IBU'
+import { Container, Nav } from 'react-bootstrap'
 import All from './All'
-import FoodPairings from './FoodPairings'
-import Year from './Year'
 import axios from './axios.js'
+import ID from './ID'
 
 
 
@@ -15,7 +12,6 @@ function Beers(props) {
 
     const [ beer, setBeer ] = useState([]);
     const [ page, setPage ] = useState(1);
-    // const [ singleBeerId, setBeerId ] = useState();
     const [ singleBeer, setSingleBeer ] = useState({});
 
 
@@ -30,23 +26,29 @@ function Beers(props) {
       
     }, [page])
 
-    console.log("clicked beer:", singleBeer);
+    // console.log("clicked beer:", singleBeer);
     
     return (
-        <Router>
-            <Nav variant="pills" defaultActiveKey="/home">
-            <Nav.Item>
-                <NavLink className="nav-link" eventkey="/home" exact to="/beers/all">All</NavLink>
-            </Nav.Item>
-            </Nav>
+        <Container className="mt-4">
+            <Router>
+                {/* <Nav variant="pills" defaultActiveKey="/home">
+                <Nav.Item>
+                <NavLink className="nav-link" eventkey="/home" exact to="/beers/all">Back</NavLink>
+                </Nav.Item>
+            </Nav> */}
 
-            <Switch>
-            <Route path="/beers/all" exact>
-                <All setPage={setPage} beer={beer} page={page} setSingleBeer={setSingleBeer}/>
-            </Route>
-            
-        </Switch>
-        </Router>
+                <Switch>
+                    <Route path={`/beers/all`} exact>
+                        <All setPage={setPage} beer={beer} page={page} setSingleBeer={setSingleBeer}/>
+                        {/* <All setPage={setPage} beer={beer} page={page} setSingleBeer={props.setSingleBeer}/> */}
+                    </Route>
+                    <Route path="/beers/id/:id" exact>
+                        <NavLink className="nav-link" to="/beers/all">Back</NavLink>
+                        <ID beer={singleBeer}/>
+                    </Route>
+                </Switch>
+            </Router>
+        </Container>
     )
 }
 
