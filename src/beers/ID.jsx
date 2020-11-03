@@ -13,18 +13,21 @@ function ID() {
   
         async function getBeerData(){
           const result = await axios.get(`?ids=${id}`);
-          setBeer(result.data);
+        //   console.log("result.data:", result.data);
+          setBeer(result.data[0]);
           }
         
         getBeerData();
       
     }, [])
 
-    console.log(beer);
 
     return (
         <div>
             <h1>ONE BEER</h1>
+            Name: {beer.name} <br />
+            Tagline: {beer.tagline} <br />
+            MAKE COMPONENTS FOR DIFFERENT PARTS TMD
         </div>
     )
 }
