@@ -10,7 +10,7 @@ function Search() {
     function handleChange(e){
         setInput(e.target.value);
     }
-    console.log(input);
+    // console.log(input);
 
     
     function submit(){
@@ -23,7 +23,7 @@ function Search() {
         search(str);
     }
 
-    console.log("results:", results);
+    // console.log("results:", results);
     
 
     return (

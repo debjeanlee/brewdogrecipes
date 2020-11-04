@@ -13,53 +13,16 @@ import Results from './Results'
 
 
 
-function Navigation() {
+function Navigation({ allBeer, random, setRandom, randomIndex, setIndex }) {
 
-    const apiUrl="https://api.punkapi.com/v2/beers";
-    const [ allBeer, setAllBeer ] = useState([]);
     const [ singleBeer, setSingleBeer ] = useState({});
-    const [ random, setRandom ] = useState({});
-    const [ randomIndex, setIndex ] = useState()
-
     
-    const getBeers = async function(pageNo = 1) {
-        let actualUrl = apiUrl + `?page=${pageNo}`;
-        var apiResults = await fetch(actualUrl)
-        .then(resp=>{
-        return resp.json();
-        });
-        return apiResults;
-    }
-    
-    const getAllBeer = async function(pageNo = 1) {
-      const results = await getBeers(pageNo);
-      console.log("Retreiving data from API for page : " + pageNo);
-      if (results.length>0) {
-        return results.concat(await getAllBeer(pageNo+1));
-      } else {
-        return results;
-      }
-    };
-    
-    useEffect(() => {
-        async function getAll(){
-            const res = await getAllBeer();
-            setAllBeer(res);
-        }
-        getAll();
-    }, [])
-  
-    function getRandomIndex(){
-        let index = Math.floor(Math.random() * 326);
-        setIndex(index);
-    }
+    let randomItem = allBeer[randomIndex];
+    setRandom(randomItem);
+   
 
-    useEffect(() => {
-        getRandomIndex();
-        setRandom(allBeer[randomIndex]);
-    }, []);
-
-    // console.log("all beer:", allBeer.length);
+    console.log("all beer", allBeer);
+    console.log("random", random);
 
     return (
         <Router>
