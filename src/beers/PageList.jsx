@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Pagination } from 'react-bootstrap'
-// import { NavLink } from 'react-router-dom'
 
 function PageList(props) {
   

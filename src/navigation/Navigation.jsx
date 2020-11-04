@@ -1,4 +1,4 @@
-import { Button, Navbar, Nav, Form, FormControl, Image } from 'react-bootstrap'
+import { Navbar, Nav, Form, Image } from 'react-bootstrap'
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
 import Home from './Home'
@@ -8,6 +8,8 @@ import logo from '../images/brewdog-logo.png'
 import ID from '../beers/ID'
 import RandomBeer from './RandomBeer'
 import axios from '../beers/axios'
+import Search from './Search'
+import Results from './Results'
 
 
 
@@ -34,6 +36,8 @@ function Navigation() {
                 <NavLink className="navbar-brand" to="/">
                     DO-DOG
                 </NavLink>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <NavLink className="nav-link" to="/">Home</NavLink>
                     <NavLink className="nav-link" to="/basics">Brewer Basics</NavLink>
@@ -41,9 +45,9 @@ function Navigation() {
                     <NavLink className="nav-link" to={`/random`} onClick={getBeerData}>Random Beer</NavLink>
                 </Nav>
                 <Form inline>
-                    <FormControl type="text" placeholder="Search for a beer" className="mr-sm-2" />
-                    <Button variant="outline-secondary">Search</Button>
+                    <Search />
                 </Form>
+                </Navbar.Collapse>
             </Navbar>    
 
             <Switch>
