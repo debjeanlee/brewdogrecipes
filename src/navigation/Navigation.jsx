@@ -51,17 +51,15 @@ function Navigation() {
   
     function getRandomIndex(){
         let index = Math.floor(Math.random() * 326);
-        console.log("index: ", index);
         setIndex(index);
     }
 
     useEffect(() => {
         getRandomIndex();
         setRandom(allBeer[randomIndex]);
-        console.log(random);
     }, []);
 
-    console.log("all beer:", allBeer.length);
+    // console.log("all beer:", allBeer.length);
 
     return (
         <Router>
@@ -98,7 +96,7 @@ function Navigation() {
                     <ID beer={singleBeer}/>
                 </Route>
                 <Route to="/random" exact>
-                    <RandomBeer beer={random} setRandom={setRandom}/>
+                    <RandomBeer beer={random} allBeer={allBeer} setRandom={setRandom}/>
                 </Route>
             </Switch>
             </Router>
