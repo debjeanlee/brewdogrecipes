@@ -15,19 +15,53 @@ import Results from './Results'
 
 function Navigation() {
 
+    const apiUrl="https://api.punkapi.com/v2/beers";
+    const [ allBeer, setAllBeer ] = useState([]);
     const [ singleBeer, setSingleBeer ] = useState({});
-
     const [ random, setRandom ] = useState({});
+    const [ randomIndex, setIndex ] = useState()
 
-    async function getBeerData(){
-        const result = await axios.get(`/random`);
-        setRandom(result.data);
+    
+    const getBeers = async function(pageNo = 1) {
+        let actualUrl = apiUrl + `?page=${pageNo}`;
+        var apiResults = await fetch(actualUrl)
+        .then(resp=>{
+        return resp.json();
+        });
+        return apiResults;
+    }
+    
+    const getAllBeer = async function(pageNo = 1) {
+      const results = await getBeers(pageNo);
+      console.log("Retreiving data from API for page : " + pageNo);
+      if (results.length>0) {
+        return results.concat(await getAllBeer(pageNo+1));
+      } else {
+        return results;
       }
+    };
     
     useEffect(() => {
-          getBeerData();
-      }, [])
-    
+        async function getAll(){
+            const res = await getAllBeer();
+            setAllBeer(res);
+        }
+        getAll();
+    }, [])
+  
+    function getRandomIndex(){
+        let index = Math.floor(Math.random() * 326);
+        console.log("index: ", index);
+        setIndex(index);
+    }
+
+    useEffect(() => {
+        getRandomIndex();
+        setRandom(allBeer[randomIndex]);
+        console.log(random);
+    }, []);
+
+    console.log("all beer:", allBeer.length);
 
     return (
         <Router>
@@ -42,7 +76,7 @@ function Navigation() {
                     <NavLink className="nav-link" to="/">Home</NavLink>
                     <NavLink className="nav-link" to="/basics">Brewer Basics</NavLink>
                     <NavLink className="nav-link" to={`/beers/all`}>Browse Recipes</NavLink>
-                    <NavLink className="nav-link" to={`/random`} onClick={getBeerData}>Random Beer</NavLink>
+                    <NavLink className="nav-link" to={`/random`}>Random Beer</NavLink>
                 </Nav>
                 <Form inline>
                     <Search />
@@ -64,7 +98,7 @@ function Navigation() {
                     <ID beer={singleBeer}/>
                 </Route>
                 <Route to="/random" exact>
-                    <RandomBeer beer={random[0]} getRandom={getBeerData} setRandom={setRandom}/>
+                    <RandomBeer beer={random[0]} setRandom={setRandom}/>
                 </Route>
             </Switch>
             </Router>
