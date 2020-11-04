@@ -28,7 +28,7 @@ function ColumnTwo({ beer }) {
                 
                 <Row className="d-flex border-bottom mb-3 py-2 justify-content-end">
                     <div className="col-2">(g)</div>
-                    <div className="col-2">Add</div>
+                    <div className="col-3">Add</div>
                     <div className="col-3">Attribute</div>
                 </Row>
                 <HopsList hops={beer.ingredients.hops} />

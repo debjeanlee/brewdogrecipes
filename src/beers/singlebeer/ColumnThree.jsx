@@ -1,9 +1,10 @@
 import React from 'react'
-import { Col, Jumbotron } from 'react-bootstrap'
+import { Col, Jumbotron, Row } from 'react-bootstrap'
+import tips from '../../images/tips.png'
 
 function ColumnThree({ beer }) {
     
-    console.log(beer);
+    // console.log(beer);
 
     return (
         <Col md={4} sm={6} className="mx-auto">
@@ -20,6 +21,9 @@ function ColumnThree({ beer }) {
         
             <h3>BREWER'S TIP</h3>
             <Jumbotron className="py-4">
+                <Row className="mb-3">
+                    <img className="id-icon mr-3" src={tips} alt="" />
+                </Row>
                 {beer.brewers_tips}
             </Jumbotron>
             
