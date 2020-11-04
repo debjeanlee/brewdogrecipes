@@ -7,28 +7,26 @@ import axios from './axios.js'
 
 function Beers(props) {
 
-
-    const [ beer, setBeer ] = useState([]);
     const [ page, setPage ] = useState(1);
     // const [ singleBeer, setSingleBeer ] = useState({});
 
 
-    useEffect(() => {
+    // useEffect(() => {
   
-        async function getBeerData(){
-            const result = await axios.get(`?page=${page}`);
-            setBeer(result.data);
-          }
+    //     async function getBeerData(){
+    //         const result = await axios.get(`?page=${page}`);
+    //         setBeer(result.data);
+    //       }
         
-        getBeerData();
+    //     getBeerData();
       
-    }, [page])
+    // }, [page])
 
 
     
     return (
         <Row className="mt-4">        
-            <All setPage={setPage} beer={beer} page={page} setSingleBeer={props.setSingleBeer}/>
+            <All setPage={setPage} allBeer={props.allBeer} page={page} setSingleBeer={props.setSingleBeer}/>
         </Row>
     )
 }

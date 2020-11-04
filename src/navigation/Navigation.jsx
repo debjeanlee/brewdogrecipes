@@ -92,13 +92,13 @@ function Navigation() {
                     <Basics />
                 </Route>
                 <Route path="/beers/all" exact>
-                    <Beers setSingleBeer={setSingleBeer}/>
+                    <Beers allBeer={allBeer} setSingleBeer={setSingleBeer}/>
                 </Route>
                 <Route path="/id/:id">
                     <ID beer={singleBeer}/>
                 </Route>
                 <Route to="/random" exact>
-                    <RandomBeer beer={random[0]} setRandom={setRandom}/>
+                    <RandomBeer beer={random} setRandom={setRandom}/>
                 </Route>
             </Switch>
             </Router>

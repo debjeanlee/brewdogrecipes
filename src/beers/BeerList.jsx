@@ -4,11 +4,11 @@ import BeerCard from './BeerCard';
 
 function BeerList(props) {
    
-    let beers = props.beer;
+    let allBeer = props.allBeer;
 
     return (
             <Row className="m-auto col-9">
-                {beers.map((el) => (
+                {allBeer.map((el) => (
                     <BeerCard beer={el} key={el.id} setSingleBeer={props.setSingleBeer}/>
                     ))}
             </Row>
