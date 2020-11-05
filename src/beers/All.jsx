@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import BeerList from './BeerList'
-import { Row, Container, Dropdown, DropdownButton } from 'react-bootstrap'
+import { Row, Container, Dropdown, DropdownButton, Form } from 'react-bootstrap'
 
 
 function All(props) {
@@ -10,6 +10,7 @@ function All(props) {
     const beer = props.allBeer;
     const abvLow = [...beer].sort((a,b) => {return a.abv - b.abv});
     const ibuLow = [...beer].sort((a,b) => {return a.ibu - b.ibu});
+    const ebcLow = [...beer].sort((a,b) => {return a.ebc - b.ebc});
 
 
     // console.log(abvLow.sort((a,b) => {return a.abv - b.abv} ));
@@ -21,6 +22,8 @@ function All(props) {
             setState("abv");
         } else if (e.target.id === "ibu"){
             setState("ibu");
+        } else if (e.target.id === "ebc"){
+            setState("ebc");
         } 
     }
 
@@ -32,7 +35,8 @@ function All(props) {
             <Container>
                 <Row className="d-flex justify-content-around mt-4 align-content-center">
                     <h1 className="text-center">BROWSE RECIPES</h1>
-                
+                </Row>
+                <Row>
                     <DropdownButton 
                         id="dropdown-basic-button" 
                         title="Sort by.."
@@ -41,8 +45,9 @@ function All(props) {
                         >
                         <Dropdown.Item onClick={handleClick} id="abv" >ABV</Dropdown.Item>
                         <Dropdown.Item onClick={handleClick} id="ibu" >IBU</Dropdown.Item>
+                        <Dropdown.Item onClick={handleClick} id="ebc" >EBC</Dropdown.Item>
                     </DropdownButton>
-                    </Row>
+                </Row>
             </Container>
 
             {(state === "all") ? (
@@ -62,6 +67,13 @@ function All(props) {
             {(state === "ibu") ? (
                 <Row className="mt-3 mx-auto col-11 px-auto">
                     <BeerList allBeer={ibuLow} page={props.page} setSingleBeer={props.setSingleBeer} />
+                </Row>
+            )
+            : "" }
+            
+            {(state === "ebc") ? (
+                <Row className="mt-3 mx-auto col-11 px-auto">
+                    <BeerList allBeer={ebcLow} page={props.page} setSingleBeer={props.setSingleBeer} />
                 </Row>
             )
             : "" }
