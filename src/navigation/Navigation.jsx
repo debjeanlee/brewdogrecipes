@@ -42,7 +42,6 @@ function Navigation({ allBeer, random, setRandom }) {
         let str = searchInput.replace(" ", "_");
         document.getElementById("searchbeer").value = "";
 
-        let resultsArr = [];
             Axios.all([beer, yeast, hops, malt, food])
             .then(
                 Axios.spread((...res) => {
@@ -57,17 +56,15 @@ function Navigation({ allBeer, random, setRandom }) {
                     //     hopsRes.data, 
                     //     maltRes.data, 
                     //     foodRes.data);
-                    resultsArr = beerRes.data.concat(yeastRes.data, hopsRes.data, maltRes.data, foodRes.data);
+                    let resultsArr = beerRes.concat(yeastRes, hopsRes, maltRes, foodRes);
                     // console.log("concat", beerRes);
                     // console.log("results concat", resultsArr);
-                    setSearchResults([resultsArr]);
+                    setSearchResults(resultsArr);
                     // console.log("search res", searchResults);
                 })
-            )
-
-            // setSearchResults([res.data]);
-            // console.log("res.data:", res.data)
-       
+            ).catch((err) => {
+                console.log(err);
+            })
     } 
     
     // console.log("all beer", allBeer);
@@ -120,7 +117,10 @@ function Navigation({ allBeer, random, setRandom }) {
                     />
                 </Route>
                 <Route path="/search">
-                   <Results />
+                   <Results 
+                   searchResults={searchResults}
+                   setSingleBeer={setSingleBeer}
+                   />
                 </Route>
             </Switch>
             </Router>
