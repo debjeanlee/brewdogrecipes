@@ -2,6 +2,7 @@ import React from 'react'
 import { Row, Container } from 'react-bootstrap';
 import BeerCard from '../beers/BeerCard'
 
+
 function Results({searchResults, setSingleBeer }) {
 
     let res = searchResults;

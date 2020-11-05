@@ -58,6 +58,14 @@ function BeerList(props) {
                         />
                         ))}
                 </Row>
+            <Row className="ml-auto my-3">
+                <PageList 
+                    activePage={activePage}
+                    setActivePage={setActivePage} 
+                    setItems={setItems} 
+                    allBeer={allBeer}
+                />
+            </Row>
             </>
         )
     }
