@@ -6,7 +6,7 @@ function PageList({ activePage, setActivePage, setItems, allBeer }) {
     let totalPages = Math.ceil(allBeer.length / 20);
     const [ pageBtns, setBtns ] = useState([]);
           
-    useEffect(() => {
+    useEffect((getItems) => {
 
         function handleClick(e){
             let page = parseInt(e.target.innerHTML);
@@ -68,7 +68,7 @@ function PageList({ activePage, setActivePage, setItems, allBeer }) {
             );
         }
         setBtns(arr);
-    }, [activePage, setActivePage])
+    }, [activePage, setActivePage, totalPages])
 
 
     function getItems(firstItem, lastItem, page){
