@@ -40,7 +40,7 @@ function BeerList(props) {
 
         return (
             <>
-            <Row className="ml-auto mt-0">
+            <Row className="ml-auto mt-0 col-md-6 col-sm-12">
                 <PageList 
                     activePage={activePage}
                     setActivePage={setActivePage} 
@@ -58,7 +58,7 @@ function BeerList(props) {
                         />
                         ))}
                 </Row>
-            <Row className="ml-auto my-3">
+            <Row className="ml-auto my-3 col-md-6 col-sm-12">
                 <PageList 
                     activePage={activePage}
                     setActivePage={setActivePage} 

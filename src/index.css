@@ -6,6 +6,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.hometext {
+  font-size: 280px;
+}
+
+.hyphen {
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 900;
+}
+
 h1, h2, h3, h4, h5, h6, strong {
   font-family: 'Teko', sans-serif;  
 }
@@ -92,6 +102,16 @@ strong {
 
   body {
     font-size: 14px;
+  }
+
+  .hometext {
+    font-size: 60px;
+  }
+  
+  .hyphen {
+    font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
   }
 
   h1 {

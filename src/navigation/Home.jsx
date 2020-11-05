@@ -3,8 +3,8 @@ import { Jumbotron } from 'react-bootstrap'
 
 function Home() {
     return (
-        <Jumbotron style={{height: '100vh'}} className="d-flex justify-content-center">
-            <h1 className="my-auto">DO <small>yourown</small> DOG</h1>
+        <Jumbotron style={{height: '95vh'}} className="d-flex justify-content-center">
+            <h1 className="my-auto hometext">BREW <span className="align-middle hyphen">yourown</span> DOG</h1>
         </Jumbotron>
     )
 }

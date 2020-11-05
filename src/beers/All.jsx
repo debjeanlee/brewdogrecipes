@@ -48,22 +48,22 @@ function All(props) {
         <div className="mx-auto">
             <Container>
                 <Row>
-                    <h1 className="col-4">BROWSE RECIPES</h1>
-                    <Row className="d-flex col-6">
+                    <h1 className="col-md-4 col-sm-12">BROWSE RECIPES</h1>
+                    <Row className="d-flex justify-content-between">
                         <DropdownButton 
                             id="dropdown-basic-button" 
                             title="Sort by.."
                             variant="Secondary"
-                            className="mt-2 col-2"
+                            className="mt-2 col-md-3 col-sm-4"
                             size="lg"
                             >
                             <Dropdown.Item onClick={handleClick} id="abv" >ABV</Dropdown.Item>
                             <Dropdown.Item onClick={handleClick} id="ibu" >IBU</Dropdown.Item>
                             <Dropdown.Item onClick={handleClick} id="ebc" >EBC</Dropdown.Item>
                         </DropdownButton>
-                    {(state === "abv") ? <Button variant="secondary" className="col-1" onClick={sortAcc}>ABV {triangle}</Button> : ""}
-                    {(state === "ibu") ? <Button variant="secondary" className="col-1" onClick={sortAcc}>IBU {triangle}</Button> : ""}
-                    {(state === "ebc") ? <Button variant="secondary" className="col-1" onClick={sortAcc}>EBC {triangle}</Button> : ""}
+                    {(state === "abv") ? <Button variant="secondary" className="col-md-4 col-sm-6" onClick={sortAcc}>ABV {triangle}</Button> : ""}
+                    {(state === "ibu") ? <Button variant="secondary" className="col-md-4 col-sm-6" onClick={sortAcc}>IBU {triangle}</Button> : ""}
+                    {(state === "ebc") ? <Button variant="secondary" className="col-md-4 col-sm-6" onClick={sortAcc}>EBC {triangle}</Button> : ""}
                     </Row>
                 </Row>
             </Container>

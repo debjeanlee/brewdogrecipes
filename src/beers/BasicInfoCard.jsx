@@ -15,7 +15,7 @@ function BasicInfoCard(props) {
 
     return (
         <Container className="mb-2">
-            <Card className="col-sm-12">
+            <Card className="col-sm-12 col-md-10 m-auto">
                 <Accordion defaultActiveKey="0">
                     <Row className="d-flex justify-content-center">
                         <Col md={6} sm={12} className="info-col">
