@@ -11,17 +11,21 @@ function Results({searchResults, setSingleBeer }) {
         <div>
             <Container className="mt-4">
                 <Row>
-                    <h1>Search results..</h1>
+                    <h1>Search results</h1>
                 </Row>
             </Container>
             <Row className="m-auto col-9">
-                {res.map((el) => (
+                {(res.length > 0) ?
+                (res.map((el, i) => (
                         <BeerCard 
                         beer={el} 
-                        key={el.id} 
+                        key={"res" + i} 
                         setSingleBeer={setSingleBeer}
                         />
-                        ))}
+                    )))
+                    :
+                    <h4>No items matched your search..</h4>
+                    }
             </Row>
         </div>
     )
