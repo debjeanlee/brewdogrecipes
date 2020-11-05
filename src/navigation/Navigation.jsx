@@ -16,13 +16,9 @@ import Results from './Results'
 function Navigation({ allBeer, random, setRandom, randomIndex, setIndex }) {
 
     const [ singleBeer, setSingleBeer ] = useState({});
-    
-    let randomItem = allBeer[randomIndex];
-    setRandom(randomItem);
-   
 
-    console.log("all beer", allBeer);
-    console.log("random", random);
+    // console.log("all beer", allBeer);
+    // console.log("random", random);
 
     return (
         <Router>

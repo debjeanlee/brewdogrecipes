@@ -1,5 +1,6 @@
 import Navigation from './navigation/Navigation';
 import React, { useState, useEffect } from 'react'
+import Axios from 'axios';
 
 
 function App() {
@@ -8,6 +9,14 @@ function App() {
     const [ allBeer, setAllBeer ] = useState([]);
     const [ random, setRandom ] = useState({});
     const [ randomIndex, setIndex ] = useState()
+
+    useEffect(() => {
+      async function getRandom(){
+        const res = await Axios.get(`${apiUrl}/random`);
+        setRandom(res.data[0]);
+      }
+      getRandom();
+    }, [])
   
     
     const getBeers = async function(pageNo = 1) {
@@ -43,11 +52,18 @@ function App() {
       getRandomIndex();
     }, [])
   
-    console.log("all beer", allBeer);
+    // console.log("aapp", random);
+    // console.log("all beer", allBeer);
     
   return (
     <div>
-      <Navigation allBeer={allBeer} random={random} setRandom={setRandom} randomIndex={randomIndex} setIndex={setIndex} />
+      <Navigation 
+      allBeer={allBeer} 
+      random={random} 
+      setRandom={setRandom} 
+      randomIndex={randomIndex} 
+      setIndex={setIndex} 
+      />
     </div>
   );
 }

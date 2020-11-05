@@ -8,7 +8,7 @@ import Header from './singlebeer/Header.jsx';
 
 function ID({beer}) {
 
-    // console.log(beer);
+    console.log("beer in ID: ", beer);
    
     const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
     const firstBrew = beer.first_brewed;
@@ -23,6 +23,7 @@ function ID({beer}) {
     return (
         <Container>
             <Header beer={beer} date={dateStr}/>
+            {/* <Header beer={beer}/> */}
             <Row>
                 <ColumnOne beer={beer} />
                 <ColumnTwo beer={beer} />
