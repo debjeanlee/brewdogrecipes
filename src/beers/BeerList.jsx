@@ -16,7 +16,7 @@ function BeerList(props) {
             twentyItems.push(allBeer[i]);
         }
             setItems(twentyItems);
-        },[])
+        },[allBeer])
 
     // console.log("20 items:", activeItems);
     // console.log("beerlist: ", allBeer);
