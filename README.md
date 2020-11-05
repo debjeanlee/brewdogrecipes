@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# BREW-yourown-DOG
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An app that let's you explore Brewdog's catalogue of recipes.
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This app allows easy access to Brewdog's beer recipes.
 
-### `npm start`
+Currently, they've released a PDF catalogue of their recipes which I found was very hard to scroll through and tedious to find specific beers, therefore pushing me to create this web app.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The current state of the app allows users to search for individual beers by name, sort by alcohol content, bitterness, or color, search for beers that pair well with different types of food, and is also able to generate a random beer, for the indecisive.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Tech Used
+```
+- React
+- Bootstrap with react
+- Ajax (axios) for API
+- HTML
+- CSS
+- Javascript
+```
 
-### `npm test`
+### Wireframes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Your step by step planning sketch of your project, that you can post them as an image in here.
 
-### `npm run build`
+### User Stories
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A story of the project user, that explains the use of the project.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+Example:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+User must be able to:
 
-### `npm run eject`
+- View Example
+- Blablabla
+- Search Example
+- Fine Example
+- etc..
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Planning and Development Process
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+A basic story of your planning and developing this project.
 
-## Learn More
+### Problem-Solving Strategy
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+What strategy did you use to solve your problems.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Unsolved problems
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+List unsolved problems which would be fixed in future iterations.
 
-### Making a Progressive Web App
+## APIs Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+I used [Punk API](https://punkapi.com/).
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+I used it because it contained most of the information I needed!
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Acknowledgments
+###### Icons from The Noun Project:
+Icon | Creator
+--------- | ---------
+excited | Alice Design
+Idea | Adrien Coquet
+Food | Aiden Icons
+yeast | Christopher T. Howlett
+Hops | Jake Dunham
+Wheat | Sebastian Belalcazar Lareo
+Fermentation Tank | Ted Casper
+Beer Kettle | Ted Caspar
+Beer Bottle | Alice Noir
+Wait | Vadim Solomakhim
+Fermenter and cellar tank | Becris
+boiling temperature | Weltenraser
+pot | Laura Faraci
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
