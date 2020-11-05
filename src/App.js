@@ -8,15 +8,6 @@ function App() {
     const apiUrl="https://api.punkapi.com/v2/beers";
     const [ allBeer, setAllBeer ] = useState([]);
     const [ random, setRandom ] = useState({});
-    
-
-    // useEffect(() => {
-    //   async function getRandom(){
-    //     const res = await Axios.get(`${apiUrl}/random`);
-    //     setRandom(res.data[0]);
-    //   }
-    //   getRandom();
-    // }, [])
   
     
     const getBeers = async function(pageNo = 1) {

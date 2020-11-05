@@ -7,7 +7,6 @@ import Beers from '../beers/Beers'
 import logo from '../images/brewdog-logo.png'
 import ID from '../beers/ID'
 import RandomBeer from './RandomBeer'
-import axios from '../beers/axios'
 import Search from './Search'
 import Results from './Results'
 
@@ -20,7 +19,6 @@ function Navigation({ allBeer, random, setRandom }) {
 
     function getNewBeer(){
         let newIndex = Math.floor(Math.random() * 326);
-        // console.log(newIndex);
         setRandom(allBeer[newIndex]);
     }
 
@@ -64,11 +62,14 @@ function Navigation({ allBeer, random, setRandom }) {
                 <Route path="/id/:id">
                     <ID beer={singleBeer}/>
                 </Route>
-                <Route to="/random" exact>
+                <Route path="/random" exact>
                     <RandomBeer 
                         beer={random} 
                         getNewBeer={getNewBeer}
                     />
+                </Route>
+                <Route path="/search">
+                   <Results />
                 </Route>
             </Switch>
             </Router>
