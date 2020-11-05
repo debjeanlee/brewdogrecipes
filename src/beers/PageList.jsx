@@ -6,14 +6,24 @@ function PageList({ activePage, setActivePage, setItems, allBeer }) {
     let totalPages = Math.ceil(allBeer.length / 20);
     const [ pageBtns, setBtns ] = useState([]);
           
-    useEffect((getItems) => {
+    useEffect(() => {
+
+        function getItems(firstItem, lastItem){
+            let items = [];
+            for (let x = firstItem; x < lastItem; x++){
+                if (allBeer[x] !== undefined){
+                    items.push(allBeer[x]);
+                }
+            }
+            setItems(items);
+        }
 
         function handleClick(e){
             let page = parseInt(e.target.innerHTML);
             let firstItem = (page - 1) * 20;
             let lastItem = (page * 20);
             setActivePage(page);
-            getItems(firstItem, lastItem, page);
+            getItems(firstItem, lastItem);
         }
 
         let arr = [];
@@ -68,10 +78,9 @@ function PageList({ activePage, setActivePage, setItems, allBeer }) {
             );
         }
         setBtns(arr);
-    }, [activePage, setActivePage, totalPages])
+    }, [activePage, setActivePage, totalPages, allBeer, setItems])
 
-
-    function getItems(firstItem, lastItem, page){
+    function getItems(firstItem, lastItem){
         let items = [];
         for (let x = firstItem; x < lastItem; x++){
             if (allBeer[x] !== undefined){
@@ -83,14 +92,14 @@ function PageList({ activePage, setActivePage, setItems, allBeer }) {
 
     function firstPage(){
         setActivePage(1);
-        getItems(0, 19, 1);
+        getItems(0, 19);
     }
     
     function lastPage(){
         let firstItem = (totalPages - 1) * 20;
         let lastItem = (totalPages * 20);
         setActivePage(totalPages);
-        getItems(firstItem, lastItem, totalPages);
+        getItems(firstItem, lastItem);
     }
 
     function nextPage(){
@@ -101,7 +110,7 @@ function PageList({ activePage, setActivePage, setItems, allBeer }) {
             let firstItem = (page - 1) * 20;
             let lastItem = (page * 20);
             setActivePage(activePage + 1);
-            getItems(firstItem, lastItem, page+1);
+            getItems(firstItem, lastItem);
         }
     }
 
@@ -113,7 +122,7 @@ function PageList({ activePage, setActivePage, setItems, allBeer }) {
             let firstItem = (page - 1) * 20;
             let lastItem = (page * 20);
             setActivePage(activePage - 1);
-            getItems(firstItem, lastItem, page-1);
+            getItems(firstItem, lastItem);
         }
     }
 
