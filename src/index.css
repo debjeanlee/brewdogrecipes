@@ -44,14 +44,14 @@ body {
 
 .hometext {
   font-size: 280px;
-  color: var(--blue);
+  color: var(--lightblue);
 }
 
 .hyphen {
   font-size: 40px;
   font-family: 'Oswald', sans-serif;
   font-weight: 900;
-  color: var(--lightorange);
+  color: var(--orange);
 }
 
 .btn {
