@@ -10,13 +10,13 @@ function App() {
     const [ random, setRandom ] = useState({});
     
 
-    useEffect(() => {
-      async function getRandom(){
-        const res = await Axios.get(`${apiUrl}/random`);
-        setRandom(res.data[0]);
-      }
-      getRandom();
-    }, [])
+    // useEffect(() => {
+    //   async function getRandom(){
+    //     const res = await Axios.get(`${apiUrl}/random`);
+    //     setRandom(res.data[0]);
+    //   }
+    //   getRandom();
+    // }, [])
   
     
     const getBeers = async function(pageNo = 1) {

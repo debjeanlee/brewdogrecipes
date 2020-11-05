@@ -13,9 +13,16 @@ import Results from './Results'
 
 
 
-function Navigation({ allBeer, random, setRandom, getRandomIndex, randomIndex }) {
+function Navigation({ allBeer, random, setRandom }) {
 
     const [ singleBeer, setSingleBeer ] = useState({});
+
+
+    function getNewBeer(){
+        let newIndex = Math.floor(Math.random() * 326);
+        // console.log(newIndex);
+        setRandom(allBeer[newIndex]);
+    }
 
     // console.log("all beer", allBeer);
     // console.log("random", random);
@@ -33,7 +40,7 @@ function Navigation({ allBeer, random, setRandom, getRandomIndex, randomIndex })
                     <NavLink className="nav-link" to="/">Home</NavLink>
                     <NavLink className="nav-link" to="/basics">Brewer Basics</NavLink>
                     <NavLink className="nav-link" to={`/beers/all`}>Browse Recipes</NavLink>
-                    <NavLink className="nav-link" to={`/random`}>Random Beer</NavLink>
+                    <NavLink className="nav-link" to={`/random`} onClick={getNewBeer}>Random Beer</NavLink>
                 </Nav>
                 <Form inline>
                     <Search />
@@ -60,8 +67,7 @@ function Navigation({ allBeer, random, setRandom, getRandomIndex, randomIndex })
                 <Route to="/random" exact>
                     <RandomBeer 
                         beer={random} 
-                        allBeer={allBeer} 
-                        setRandom={setRandom}
+                        getNewBeer={getNewBeer}
                     />
                 </Route>
             </Switch>

@@ -3,14 +3,10 @@ import { Button, Col, Container, Row } from 'react-bootstrap'
 import ID from '../beers/ID'
 import Axios from 'axios'
 
-function RandomBeer({ beer, allBeer, setRandom }) {
+function RandomBeer({ beer, getNewBeer }) {
 
     // console.log(allBeer);
-    function getNewBeer(){
-        let newIndex = Math.floor(Math.random() * 326);
-        // console.log(newIndex);
-        setRandom(allBeer[newIndex]);
-    }
+
     // console.log("beer in random:", beer);
 
 
