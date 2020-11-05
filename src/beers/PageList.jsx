@@ -3,31 +3,36 @@ import { Pagination } from 'react-bootstrap'
 
 function PageList({ activePage, setActivePage, setItems, allBeer }) {
   
-
     let totalPages = Math.ceil(allBeer.length / 20);
     let pageBtns = [];
-
+    
     for (let x = 1; x < totalPages + 1; x++){
         pageBtns.push(
             <Pagination.Item
-                key={x}
-                active={x === activePage}
-                onClick={ e => {handleClick(e)}}
+            key={x}
+            active={x === activePage}
+            onClick={ e => {handleClick(e)}}
             >
                 {x}   
             </Pagination.Item>,
         )
-    }
+    }    
     
-
     function handleClick(e){
         let page = parseInt(e.target.innerHTML);
         setActivePage(page);
         
-        // setPage(e);
-        // let page = parseInt(e.target.innerHTML);
-        // setActive(page);
+        let firstItem = (page - 1) * 20;
+        let lastItem = (page * 20);
+        let items = [];
+        for (let x = firstItem; x < lastItem; x++){
+            if (allBeer[x] !== undefined){
+                items.push(allBeer[x]);
+            }
+        }
+        setItems(items);
     }
+
 
 
     // function firstPage(){
