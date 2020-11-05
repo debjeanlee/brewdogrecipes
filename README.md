@@ -64,11 +64,11 @@ _Basics of Brewing_
 ### Problem-Solving Strategy
 
 At first I was making a ridiculous number of API calls to get the information I needed.
-```
+
 For example:
-Everytime I changed a page, I would make an API call to get a specific page from the API.
-(This particular API has a max limit of 80 items per page)
-```
+> Everytime I changed a page, I would make an API call to get a specific page from the API.
+> (This particular API has a max limit of 80 items per page)
+
 Upon future realisation that there was definitely a way to consolidate all my data..
 ```
 What I did:
