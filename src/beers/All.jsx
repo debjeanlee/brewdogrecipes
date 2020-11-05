@@ -30,20 +30,19 @@ function All(props) {
     return (
         <div className="mx-auto">
             <Container>
-            <Row className="d-flex justify-content-around mt-4">
-                <h1 className="text-center">BROWSE RECIPES</h1>
-            </Row>
-
-                <Row>
-                <DropdownButton 
-                    id="dropdown-basic-button" 
-                    title="Sort by.."
-                    variant="Secondary"
-                    >
-                    <Dropdown.Item onClick={handleClick} id="abv" >ABV</Dropdown.Item>
-                    <Dropdown.Item onClick={handleClick} id="ibu" >IBU</Dropdown.Item>
-                </DropdownButton>
-                </Row>
+                <Row className="d-flex justify-content-around mt-4 align-content-center">
+                    <h1 className="text-center">BROWSE RECIPES</h1>
+                
+                    <DropdownButton 
+                        id="dropdown-basic-button" 
+                        title="Sort by.."
+                        variant="Secondary"
+                        className="mt-2"
+                        >
+                        <Dropdown.Item onClick={handleClick} id="abv" >ABV</Dropdown.Item>
+                        <Dropdown.Item onClick={handleClick} id="ibu" >IBU</Dropdown.Item>
+                    </DropdownButton>
+                    </Row>
             </Container>
 
             {(state === "all") ? (
