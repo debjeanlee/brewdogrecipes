@@ -18,7 +18,7 @@ function Header({ beer }) {
         <Jumbotron className="py-3">
             <Row className="d-flex justify-content-between">
                 <h4 className="mb-0">#{beer.id}</h4>
-                <h4 className="mb-0 text-secondary">{dateStr}</h4>
+                <h4 className="mb-0">{dateStr}</h4>
             </Row>
             <Row>
                 <h1>{beer.name}</h1>

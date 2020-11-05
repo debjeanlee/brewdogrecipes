@@ -1,19 +1,76 @@
+:root {
+  --orange: #F17720;
+  --lightorange: #FFA630;
+  --gray: #EBEBEB;
+  --darkgray: #5f5f5f;
+  --lightblue: #1da5d3;
+  --blue: #0a8fe2;
+}
+
 body {
   margin: 0;
   font-family: 'Oswald', sans-serif;
   font-weight: 300px;
+  background-color: var(--gray);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.jumbotron {
+  background-color: var(--lightblue);
+  color: var(--gray);
+}
+
+.accordion {
+  background-color: var(--lightblue);
+  color: var(--gray);
+}
+
+.card-title {
+  color: var(--blue);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.card {
+  color: var(--darkgray);
+}
+
+.nav-link {
+  color: var(--orange);
+}
+
 .hometext {
   font-size: 280px;
+  color: var(--blue);
 }
 
 .hyphen {
   font-size: 40px;
   font-family: 'Oswald', sans-serif;
   font-weight: 900;
+  color: var(--lightorange);
+}
+
+.btn {
+  background-color: var(--blue);
+  color: var(--gray);
+}
+
+.btn:hover {
+  color: white;
+  background-color: var(--lightblue);
+}
+
+.card-btn {
+  border-radius: 5px;
+}
+
+.card-btn:hover {
+  color: white;
+  background-color: var(--lightorange);
 }
 
 h1, h2, h3, h4, h5, h6, strong {

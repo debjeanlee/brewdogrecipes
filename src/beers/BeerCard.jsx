@@ -37,14 +37,14 @@ function BeerCard(props) {
                     </div>
         
                     <div className="row mt-3 justify-content-between">
-                        <span className="pr-1 col"><strong>ABV </strong><br />{props.beer.abv}%</span>
-                        <span className="pr-1 col"><strong>IBU </strong><br />{props.beer.ibu}</span>
-                        <span className="pr-1 col"><strong>OG </strong><br />{props.beer.target_og}</span>
+                        <span className="pr-1 col"><strong className="blue">ABV </strong><br />{props.beer.abv}%</span>
+                        <span className="pr-1 col"><strong className="blue">IBU </strong><br />{props.beer.ibu}</span>
+                        <span className="pr-1 col"><strong className="blue">OG </strong><br />{props.beer.target_og}</span>
 
                     </div>
                 </div>
         
-                <NavLink className="nav-link btn-light text-center" to={`/id/${props.beer.id}`} onClick={() => {handleClick()}}>See Recipe</NavLink>
+                <NavLink className="nav-link btn-light card-btn text-center" to={`/id/${props.beer.id}`} onClick={() => {handleClick()}}>See Recipe</NavLink>
             </div>
         </div>
     )
