@@ -11,6 +11,7 @@ import RandomBeer from './RandomBeer'
 import Search from './Search'
 import Results from './Results'
 import Axios from 'axios'
+import Login from './Login'
 
 
 
@@ -91,6 +92,9 @@ function Navigation({ allBeer, random, setRandom }) {
                         submit={submit}
                     />
                 </Form>
+                <Nav className="ml-auto">
+                    <NavLink className="nav-link" to="/login" >Login</NavLink>
+                </Nav>
                 </Navbar.Collapse>
             </Navbar>    
 
@@ -121,6 +125,9 @@ function Navigation({ allBeer, random, setRandom }) {
                    searchResults={searchResults}
                    setSingleBeer={setSingleBeer}
                    />
+                </Route>
+                <Route path="/login" exact>
+                    <Login />
                 </Route>
             </Switch>
             </Router>
