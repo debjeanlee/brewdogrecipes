@@ -1,6 +1,5 @@
 import Navigation from './navigation/Navigation';
 import React, { useState, useEffect } from 'react'
-import Axios from 'axios';
 
 
 function App() {
@@ -9,6 +8,7 @@ function App() {
     const [ allBeer, setAllBeer ] = useState([]);
     const [ random, setRandom ] = useState({});
   
+    useEffect(() => {
     
     const getBeers = async function(pageNo = 1) {
         let actualUrl = apiUrl + `?page=${pageNo}`;
@@ -29,11 +29,11 @@ function App() {
       }
     };
 
-    useEffect(() => {
-      const setAll = async function(){
-          const result = await getAllBeer();
-          setAllBeer(result);
-      }
+    const setAll = async function(){
+        const result = await getAllBeer();
+        setAllBeer(result);
+    }
+
       setAll();
     }, [])
   

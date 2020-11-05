@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { FormControl, Button, Row } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom';
-import axios from '../beers/axios'
 
 function Search({handleChange, submit, searchInput}) {
 

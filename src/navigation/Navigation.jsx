@@ -65,7 +65,7 @@ function Navigation({ allBeer, random, setRandom }) {
         setSearchInput("");
     } 
     
-    console.log(searchInput);
+    // console.log(searchInput);
     // console.log("all beer", allBeer);
     // console.log("random", random);
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
 import ID from '../beers/ID'
-import Axios from 'axios'
 
 function RandomBeer({ beer, getNewBeer }) {
 

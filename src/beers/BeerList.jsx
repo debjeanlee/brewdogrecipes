@@ -6,6 +6,8 @@ function BeerList(props) {
    
     let allBeer = props.allBeer;
 
+    
+
     return (
             <Row className="m-auto col-9">
                 {allBeer.map((el) => (
