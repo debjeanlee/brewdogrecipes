@@ -79,10 +79,10 @@ Doing this enabled me to set the number of items I wanted to display on each pag
 ### Unsolved problems
 
 ##### Sort function in browse page
-```
-The function currently does not reset the page to the first page, but displays the items on the current page instead.
-It also doesn't reset to it's original state.
-```
+
+>The function currently does not reset the page to the first page, but displays the items on the current page instead.
+>It also doesn't reset to it's original state.
+
 ##### Minor problems with CSS responsiveness
 ```
 Some things just aren't lining up correctly when the screen size shrinks.
