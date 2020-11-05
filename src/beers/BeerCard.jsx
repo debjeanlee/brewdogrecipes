@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import beerbottle from '../images/beerbottle.png'
 
 
@@ -44,7 +44,7 @@ function BeerCard(props) {
                     </div>
                 </div>
         
-                <Link className="nav-link btn-light text-center" to={`/id/${props.beer.id}`} onClick={() => {handleClick()}}>See Recipe</Link>
+                <NavLink className="nav-link btn-light text-center" to={`/id/${props.beer.id}`} onClick={() => {handleClick()}}>See Recipe</NavLink>
             </div>
         </div>
     )
