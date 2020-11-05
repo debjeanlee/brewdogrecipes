@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row } from 'react-bootstrap';
+import { Row, Container } from 'react-bootstrap';
 import BeerCard from '../beers/BeerCard'
 
 function Results({searchResults, setSingleBeer }) {
@@ -8,15 +8,19 @@ function Results({searchResults, setSingleBeer }) {
 
     return (
         <div>
-            <h1>Search results..</h1>
+            <Container className="mt-4">
+                <Row>
+                    <h1>Search results..</h1>
+                </Row>
+            </Container>
             <Row className="m-auto col-9">
-            {res.map((el) => (
-                    <BeerCard 
-                    beer={el} 
-                    key={el.id} 
-                    setSingleBeer={setSingleBeer}
-                    />
-                    ))}
+                {res.map((el) => (
+                        <BeerCard 
+                        beer={el} 
+                        key={el.id} 
+                        setSingleBeer={setSingleBeer}
+                        />
+                        ))}
             </Row>
         </div>
     )

@@ -53,14 +53,14 @@ function All(props) {
             : "" }
 
             {(state === "abv") ? (
-                <Row className="mt-3 mx-auto">
+                <Row className="mt-3 mx-auto col-11 px-auto">
                     <BeerList allBeer={abvLow} page={props.page} setSingleBeer={props.setSingleBeer} />
                 </Row>
             )
             : "" }
 
             {(state === "ibu") ? (
-                <Row className="mt-3 mx-auto">
+                <Row className="mt-3 mx-auto col-11 px-auto">
                     <BeerList allBeer={ibuLow} page={props.page} setSingleBeer={props.setSingleBeer} />
                 </Row>
             )
