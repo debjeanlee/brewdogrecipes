@@ -3,7 +3,7 @@ import { Jumbotron } from 'react-bootstrap'
 
 function Home() {
     return (
-        <Jumbotron fluid style={{height: '100vh'}} className="d-flex justify-content-center">
+        <Jumbotron style={{height: '100vh'}} className="d-flex justify-content-center">
             <h1 className="my-auto">DO <small>yourown</small> DOG</h1>
         </Jumbotron>
     )
