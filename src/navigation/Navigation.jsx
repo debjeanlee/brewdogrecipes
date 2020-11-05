@@ -31,15 +31,19 @@ function Navigation({ allBeer, random, setRandom }) {
     function handleChange(e){
         setSearchInput(e.target.value);
     }
-
-    let beer = axios.get(`?beer_name=${searchInput}&per_page=80`);
-    let yeast = axios.get(`?yeast=${searchInput}&per_page=80`);
-    let hops = axios.get(`?hops=${searchInput}&per_page=80`);
-    let malt = axios.get(`?malt=${searchInput}&per_page=80`);
-    let food = axios.get(`?food=${searchInput}&per_page=80`);
-
+    
     function submit(){
+        if (searchInput === "") {
+            alert("Input a beer name, yeast, malt or a food!");
+            console.log("type something bij");
+        } else {
         let str = searchInput.replace(" ", "_");
+    
+        let beer = axios.get(`?beer_name=${str}&per_page=80`);
+        let yeast = axios.get(`?yeast=${str}&per_page=80`);
+        let hops = axios.get(`?hops=${str}&per_page=80`);
+        let malt = axios.get(`?malt=${str}&per_page=80`);
+        let food = axios.get(`?food=${str}&per_page=80`);
         document.getElementById("searchbeer").value = "";
 
             Axios.all([beer, yeast, hops, malt, food])
@@ -50,23 +54,18 @@ function Navigation({ allBeer, random, setRandom }) {
                     const hopsRes = res[2].data;
                     const maltRes = res[3].data;
                     const foodRes = res[4].data;
-                    // console.log(beerRes, yeastRes, hopsRes, maltRes, foodRes);
-                    // console.log(beerRes.data, 
-                    //     yeastRes.data, 
-                    //     hopsRes.data, 
-                    //     maltRes.data, 
-                    //     foodRes.data);
                     let resultsArr = beerRes.concat(yeastRes, hopsRes, maltRes, foodRes);
-                    // console.log("concat", beerRes);
-                    // console.log("results concat", resultsArr);
                     setSearchResults(resultsArr);
-                    // console.log("search res", searchResults);
+                    
                 })
             ).catch((err) => {
-                console.log(err);
+                console.log("HOW AH")
             })
+        }
+        setSearchInput("");
     } 
     
+    console.log(searchInput);
     // console.log("all beer", allBeer);
     // console.log("random", random);
 
@@ -88,6 +87,7 @@ function Navigation({ allBeer, random, setRandom }) {
                 <Form inline>
                     <Search 
                         handleChange={handleChange} 
+                        searchInput={searchInput}
                         submit={submit}
                     />
                 </Form>

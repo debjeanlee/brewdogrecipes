@@ -9,7 +9,11 @@ function BeerList(props) {
     return (
             <Row className="m-auto col-9">
                 {allBeer.map((el) => (
-                    <BeerCard beer={el} key={el.id} setSingleBeer={props.setSingleBeer}/>
+                    <BeerCard 
+                    beer={el} 
+                    key={el.id} 
+                    setSingleBeer={props.setSingleBeer}
+                    />
                     ))}
             </Row>
 
