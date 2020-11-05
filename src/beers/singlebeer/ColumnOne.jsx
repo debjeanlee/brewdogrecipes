@@ -5,12 +5,12 @@ import Method from './Method'
 function ColumnOne({beer}) {
     return (
         <Col md={4} sm={6} className="mx-auto">
-            <h3>THIS BEER IS</h3>
+            <h3 className="solid-btm">THIS BEER IS</h3>
             <Jumbotron className="pt-4 pb-1">
                 <p>{beer.description}</p>
             </Jumbotron>
         
-            <h3>BASICS</h3>
+            <h3 className="solid-btm">BASICS</h3>
             <Jumbotron className="pt-4 pb-1">
                 <p className="d-flex border-bottom py-2">
                     <strong className="mr-auto">VOLUME</strong> 

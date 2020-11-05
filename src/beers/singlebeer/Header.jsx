@@ -16,18 +16,18 @@ function Header({ beer }) {
     
     return (
         <Jumbotron className="py-3">
-            <Row className="d-flex justify-content-between py-3">
-                <h3>#{beer.id}</h3>
-                <h3 className="text-secondary">{dateStr}</h3>
+            <Row className="d-flex justify-content-between">
+                <h4 className="mb-0">#{beer.id}</h4>
+                <h4 className="mb-0 text-secondary">{dateStr}</h4>
             </Row>
             <Row>
                 <h1>{beer.name}</h1>
             </Row>
-            <Row className="border-top border-bottom my-2 py-3 d-flex">
+            <Row className="solid-5 my-2 py-3 d-flex">
                 <h2 className="mr-auto my-auto">{beer.tagline}</h2>
-                <h4 className="mr-2 my-auto"><strong>ABV </strong>{beer.abv}% |</h4>
-                <h4 className="mr-2 my-auto"><strong>IBU </strong>{beer.ibu} |</h4>
-                <h4 className="mr-2 my-auto"><strong>OG </strong>{beer.target_og}</h4>
+                <h5 className="mr-2 my-auto">ABV {beer.abv}% |</h5>
+                <h5 className="mr-2 my-auto">IBU {beer.ibu} |</h5>
+                <h5 className="mr-2 my-auto">OG {beer.target_og}</h5>
             </Row>
         </Jumbotron>
     )

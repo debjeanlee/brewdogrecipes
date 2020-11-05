@@ -32,14 +32,14 @@ function BeerCard(props) {
                 </div>
 
                 <div className="card-body">
-                    <div className="row mt-3 justify-content-end">
+                    <div className="row mt-3 col-sm-12 justify-content-end">
                         <h5>{date}</h5>
                     </div>
         
                     <div className="row mt-3 justify-content-between">
-                        <span className="pr-1"><strong>ABV </strong>{props.beer.abv}%</span>
-                        <span className="pr-1"><strong>IBU </strong>{props.beer.ibu}</span>
-                        <span className="pr-1"><strong>OG </strong>{props.beer.target_og}</span>
+                        <span className="pr-1 col"><strong>ABV </strong><br />{props.beer.abv}%</span>
+                        <span className="pr-1 col"><strong>IBU </strong><br />{props.beer.ibu}</span>
+                        <span className="pr-1 col"><strong>OG </strong><br />{props.beer.target_og}</span>
 
                     </div>
                 </div>

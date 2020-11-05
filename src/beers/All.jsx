@@ -47,23 +47,24 @@ function All(props) {
     return (
         <div className="mx-auto">
             <Container>
-                <Row className="d-flex justify-content-around mt-4 align-content-center">
-                    <h1 className="text-center">BROWSE RECIPES</h1>
-                </Row>
-                <Row className="d-flex">
-                    <DropdownButton 
-                        id="dropdown-basic-button" 
-                        title="Sort by.."
-                        variant="Secondary"
-                        className="mt-2 col-2"
-                        >
-                        <Dropdown.Item onClick={handleClick} id="abv" >ABV</Dropdown.Item>
-                        <Dropdown.Item onClick={handleClick} id="ibu" >IBU</Dropdown.Item>
-                        <Dropdown.Item onClick={handleClick} id="ebc" >EBC</Dropdown.Item>
-                    </DropdownButton>
-                {(state === "abv") ? <Button variant="secondary" className="col-1" onClick={sortAcc}>ABV {triangle}</Button> : ""}
-                {(state === "ibu") ? <Button variant="secondary" className="col-1" onClick={sortAcc}>IBU {triangle}</Button> : ""}
-                {(state === "ebc") ? <Button variant="secondary" className="col-1" onClick={sortAcc}>EBC {triangle}</Button> : ""}
+                <Row>
+                    <h1 className="col-4">BROWSE RECIPES</h1>
+                    <Row className="d-flex col-6">
+                        <DropdownButton 
+                            id="dropdown-basic-button" 
+                            title="Sort by.."
+                            variant="Secondary"
+                            className="mt-2 col-2"
+                            size="lg"
+                            >
+                            <Dropdown.Item onClick={handleClick} id="abv" >ABV</Dropdown.Item>
+                            <Dropdown.Item onClick={handleClick} id="ibu" >IBU</Dropdown.Item>
+                            <Dropdown.Item onClick={handleClick} id="ebc" >EBC</Dropdown.Item>
+                        </DropdownButton>
+                    {(state === "abv") ? <Button variant="secondary" className="col-1" onClick={sortAcc}>ABV {triangle}</Button> : ""}
+                    {(state === "ibu") ? <Button variant="secondary" className="col-1" onClick={sortAcc}>IBU {triangle}</Button> : ""}
+                    {(state === "ebc") ? <Button variant="secondary" className="col-1" onClick={sortAcc}>EBC {triangle}</Button> : ""}
+                    </Row>
                 </Row>
             </Container>
 

@@ -13,7 +13,7 @@ function ColumnTwo({ beer }) {
     
     return (
         <Col md={4} sm={6} className="mx-auto">
-            <h3>INGREDIENTS</h3>
+            <h3 className="solid-btm">INGREDIENTS</h3>
             <Jumbotron className="pt-4 pb-1">
                 <Row className="mb-3">
                     <img className="id-icon mr-3" src={malts} alt="" />
@@ -42,7 +42,7 @@ function ColumnTwo({ beer }) {
                 </Row>
             </Jumbotron>
         
-            <h3>FOOD PAIRING</h3>
+            <h3 className="solid-btm">FOOD PAIRING</h3>
             <Jumbotron className="pt-4 pb-3">
                 <Row className="mb-3">
                     <img className="id-icon mr-3" src={food} alt="" />

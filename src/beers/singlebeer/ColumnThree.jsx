@@ -8,7 +8,7 @@ function ColumnThree({ beer }) {
 
     return (
         <Col md={4} sm={6} className="mx-auto">
-             <h3>PACKAGING</h3>
+             <h3 className="solid-btm">PACKAGING</h3>
             <Jumbotron className="pt-4 pb-3"
             style={{
                 backgroundImage: `url(${beer.image_url})`, 
@@ -19,7 +19,7 @@ function ColumnThree({ beer }) {
                 }}>
             </Jumbotron>
         
-            <h3>BREWER'S TIP</h3>
+            <h3 className="solid-btm">BREWER'S TIP</h3>
             <Jumbotron className="py-4">
                 <Row className="mb-3">
                     <img className="id-icon mr-3" src={tips} alt="" />

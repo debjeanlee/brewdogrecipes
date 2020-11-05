@@ -10,7 +10,7 @@ function Method({ method }) {
 
     return (
         <div>
-            <h3>METHOD/TIMINGS</h3>
+            <h3 className="solid-btm">METHOD/TIMINGS</h3>
             <Jumbotron className="pt-4 pb-1">
                 <Row className="mb-3">
                     <img className="id-icon mr-3" src={mashing} alt="" />
