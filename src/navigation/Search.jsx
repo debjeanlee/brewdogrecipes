@@ -9,7 +9,7 @@ function Search({handleChange, submit, searchInput}) {
     return (
         <div>
             <Row>
-                <FormControl type="text" placeholder="Search for a beer" className="mr-sm-2 my-auto" id="searchbeer" onChange={handleChange}/>
+                <FormControl type="text" placeholder="Search for beer, food.." className="mr-sm-2 my-auto" id="searchbeer" onChange={handleChange}/>
                 {(searchInput === "") ? 
                  <Button 
                     className="btn btn-light" 
