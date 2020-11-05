@@ -8,7 +8,7 @@ function App() {
     const apiUrl="https://api.punkapi.com/v2/beers";
     const [ allBeer, setAllBeer ] = useState([]);
     const [ random, setRandom ] = useState({});
-    const [ randomIndex, setIndex ] = useState()
+    
 
     useEffect(() => {
       async function getRandom(){
@@ -38,18 +38,12 @@ function App() {
       }
     };
 
-    function getRandomIndex(){
-      let index = Math.floor(Math.random() * 326);
-      setIndex(index);
-  }
-
     useEffect(() => {
       const setAll = async function(){
           const result = await getAllBeer();
           setAllBeer(result);
       }
       setAll();
-      getRandomIndex();
     }, [])
   
     // console.log("aapp", random);
@@ -61,8 +55,6 @@ function App() {
       allBeer={allBeer} 
       random={random} 
       setRandom={setRandom} 
-      randomIndex={randomIndex} 
-      setIndex={setIndex} 
       />
     </div>
   );

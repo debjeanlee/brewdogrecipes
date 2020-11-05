@@ -13,7 +13,7 @@ import Results from './Results'
 
 
 
-function Navigation({ allBeer, random, setRandom, randomIndex, setIndex }) {
+function Navigation({ allBeer, random, setRandom, getRandomIndex, randomIndex }) {
 
     const [ singleBeer, setSingleBeer ] = useState({});
 
@@ -49,13 +49,20 @@ function Navigation({ allBeer, random, setRandom, randomIndex, setIndex }) {
                     <Basics />
                 </Route>
                 <Route path="/beers/all" exact>
-                    <Beers allBeer={allBeer} setSingleBeer={setSingleBeer}/>
+                    <Beers 
+                        allBeer={allBeer} 
+                        setSingleBeer={setSingleBeer}
+                    />
                 </Route>
                 <Route path="/id/:id">
                     <ID beer={singleBeer}/>
                 </Route>
                 <Route to="/random" exact>
-                    <RandomBeer beer={random} allBeer={allBeer} setRandom={setRandom}/>
+                    <RandomBeer 
+                        beer={random} 
+                        allBeer={allBeer} 
+                        setRandom={setRandom}
+                    />
                 </Route>
             </Switch>
             </Router>
