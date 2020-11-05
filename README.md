@@ -10,7 +10,7 @@ Currently, they've released a PDF catalogue of their recipes which I found was v
 
 The current state of the app allows users to search for individual beers by name, sort by alcohol content, bitterness, or color, search for beers that pair well with different types of food, and is also able to generate a random beer, for the indecisive.
 
-### Tech Used
+## Tech Used
 
 * React
 * Bootstrap with react
@@ -20,12 +20,12 @@ The current state of the app allows users to search for individual beers by name
 * Javascript
 
 
-### Wireframes
+## Wireframes
 
 These are the rough sketches of the main reusable components my app needed.
 ![Wireframe Sketch](/userstory/wireframes.jpg)
 
-### User Stories
+## User Stories
 
 **a user should be able to**
 * Browse the catalogue of recipes easily
@@ -61,7 +61,7 @@ I added this page later:
 _Basics of Brewing_
 ![Basics](/userstory/basics.png)
 
-### Problem-Solving Strategy
+## Problem-Solving Strategy
 
 At first I was making a ridiculous number of API calls to get the information I needed.
 
@@ -76,7 +76,7 @@ What I did:
 > Doing this enabled me to set the number of items I wanted to display on each page.
 
 
-### Unsolved problems
+## Unsolved problems
 
 ##### Sort function in browse page
 
@@ -87,7 +87,7 @@ What I did:
 
 > Some things just aren't lining up correctly when the screen size shrinks.
 
-### Future Upgrades
+## Future Upgrades
 
 - [ ] Adding a function that allows users to choose the number of items to display on the page
 - [ ] Adding firebase user auth so users can login and save their favourite recipes
