@@ -72,8 +72,8 @@ For example:
 Upon future realisation that there was definitely a way to consolidate all my data..
 
 What I did:
-> I made a bunch of API calls at the start to consolidate all my data, to prevent too many re-renders.
-> Doing this enabled me to set the number of items I wanted to display on each page.
+> I made a bunch of API calls at the start to consolidate all my data.
+> Doing this enabled me to set the number of items I wanted to display on each page without waiting for the API to constantly fetch data.
 
 
 ## Unsolved problems
@@ -92,6 +92,8 @@ What I did:
 - [ ] Adding a function that allows users to choose the number of items to display on the page
 - [ ] Adding firebase user auth so users can login and save their favourite recipes
 - [ ] Links to buy ingredients for specific beer?
+- [ ] Loading screens
+- [ ] Add more info to the basics info screen
 
 ## APIs Used
 
