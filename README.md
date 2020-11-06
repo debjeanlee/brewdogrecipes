@@ -94,6 +94,7 @@ What I did:
 - [ ] Links to buy ingredients for specific beer?
 - [ ] Loading screens
 - [ ] Add more info to the basics info screen
+- [ ] Adding an explore function that lets people see beers based on selected foods
 
 ## APIs Used
 

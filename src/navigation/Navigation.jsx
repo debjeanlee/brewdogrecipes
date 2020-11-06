@@ -34,7 +34,7 @@ function Navigation({ allBeer, random, setRandom }) {
     
     function submit(){
         if (searchInput === "") {
-            alert("Input a beer name, yeast, malt or a food!");
+            alert("Input a beer name, yeast, malt, hop or a food!");
             console.log("type something bij");
         } else {
         let str = searchInput.replace(" ", "_");
