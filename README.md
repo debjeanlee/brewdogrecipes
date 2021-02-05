@@ -1,4 +1,4 @@
-# BREW-yourown-DOG
+# Brew Dog Recipes
 
 An app that let's you explore Brewdog's catalogue of recipes.
 
