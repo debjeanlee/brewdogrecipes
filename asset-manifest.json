@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cd62afda.chunk.css",
+    "main.js": "/static/js/main.e0917221.chunk.js",
+    "main.js.map": "/static/js/main.e0917221.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5b341ab3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5b341ab3.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.1b638a52.chunk.js": "/static/js/2.1b638a52.chunk.js",
+    "static/js/2.1b638a52.chunk.js.map": "/static/js/2.1b638a52.chunk.js.map",
+    "static/js/3.e05fcd7f.chunk.js": "/static/js/3.e05fcd7f.chunk.js",
+    "static/js/3.e05fcd7f.chunk.js.map": "/static/js/3.e05fcd7f.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.cd62afda.chunk.css.map": "/static/css/main.cd62afda.chunk.css.map",
+    "static/js/2.1b638a52.chunk.js.LICENSE.txt": "/static/js/2.1b638a52.chunk.js.LICENSE.txt",
+    "static/media/beerbottle.7957e069.png": "/static/media/beerbottle.7957e069.png",
+    "static/media/boiling.d27edd48.png": "/static/media/boiling.d27edd48.png",
+    "static/media/brewdog-logo.b34fb51d.png": "/static/media/brewdog-logo.b34fb51d.png",
+    "static/media/conditioning.24ccaee9.png": "/static/media/conditioning.24ccaee9.png",
+    "static/media/fermentation.522a0c61.png": "/static/media/fermentation.522a0c61.png",
+    "static/media/fermentation2.afed58b4.png": "/static/media/fermentation2.afed58b4.png",
+    "static/media/food.5abf64e9.png": "/static/media/food.5abf64e9.png",
+    "static/media/hops.4003c460.png": "/static/media/hops.4003c460.png",
+    "static/media/malts.9c4cd02b.png": "/static/media/malts.9c4cd02b.png",
+    "static/media/mashing.544b8421.png": "/static/media/mashing.544b8421.png",
+    "static/media/mashpot.fb4c340c.png": "/static/media/mashpot.fb4c340c.png",
+    "static/media/tips.6ef9ac35.png": "/static/media/tips.6ef9ac35.png",
+    "static/media/twist.3bf50e64.png": "/static/media/twist.3bf50e64.png",
+    "static/media/yeast.6e329142.png": "/static/media/yeast.6e329142.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5b341ab3.js",
+    "static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.1b638a52.chunk.js",
+    "static/css/main.cd62afda.chunk.css",
+    "static/js/main.e0917221.chunk.js"
+  ]
+}
